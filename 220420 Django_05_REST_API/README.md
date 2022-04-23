@@ -14,7 +14,7 @@
 	- Stateless/ Connectionless
 	- 쿠키와 세션을 통해 서버 상태를 요청과 연결
 
-![image-20220420133903349](220420 Django_05_REST_API.assets/image-20220420133903349.png)
+![image-20220420133903349](README.assets/image-20220420133903349.png)
 
 ##### HTTP request methods
 - 자원에 대한 행위를 정의/ 주어진 자원에 수행하길 원하는 행동
@@ -155,7 +155,7 @@ def 함수작성():
 - DRF의 Serializer는 Django의 Form 및 ModelForm 클래스와 매우 유사하게 구성되고 작동함.
 - Web API : 웹 애플리케이션 개발에서 다른 서비스에 요청을 보내고 응답을 받기 위해 정의된 명세.
 
-![image-20220420174600476](220420 Django_05_REST_API.assets/image-20220420174600476.png)
+![image-20220420174600476](README.assets/image-20220420174600476.png)
 
 
 ### Single Model
@@ -183,7 +183,7 @@ class ARticleListSerializer(serializers.ModelSerializer):
 - many = True
 	- "Serializing multiple objects"/ 단일 인스턴스 대신 QuerySet 등을 직렬화하기 위해서는 serializer를 인스턴스화 할 때 many=True를 키워드 인자로 전달.
 
-![image-20220420202417053](220420 Django_05_REST_API.assets/image-20220420202417053.png)
+![image-20220420202417053](README.assets/image-20220420202417053.png)
 
 ##### 1. GET - Article List
 - api_view decorator
