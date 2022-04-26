@@ -211,3 +211,176 @@ for (const fruit of fruits){
 ![image-20220425155513565](README.assets/image-20220425155513565.png)
 
 ### 함수
+
+### 함수
+
+-  참조 타입 중 하나로써 function 타입에 속함.
+-  Js에서 함수는 일급객체(first-class citizen)이다.(변수 할당가능, 함수의 매개변수전달, 함수의 반환값으로 사용가능)
+
+#### 함수선언식/ 함수표현식
+
+-  함수선언식(function declaration)/ 함수 표현식(function expression)의 두가지 방법으로 함수를 정의한다.	
+
+```js
+//함수 선언식
+function name(args) {
+	// 실행
+}
+//함수 표현식
+const name = function (args) {
+	//실행내용
+}
+```
+
+- function()의 괄호안에 기본인자를 설정 가능하다.
+- 매개변수와 인자의 개수가 불일치할 경우 많으면 무시하고 부족하면 undefined로 대체하여 함수를 실행한다.
+
+###### Rest operator
+
+- rest operator()를 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 **받는다.**
+
+```js
+const restOpr = function(arg1, arg2, ...restArgs) {
+	return [arg1,arg2,restArgs]
+}
+```
+
+###### Spread operator
+
+- spread operator()를 사용하면 배열 인자를 전개하여 **전달** 가능.
+
+```js
+const spreadOpr = function(arg1,arg2,arg3){
+	return arg1+arg2+arg3
+}
+const numbers = [1,2,3]
+spreadOpr(...numbers) // 6 출력
+```
+
+### 선언식 vs 표현식 
+
+![image-20220426094940549](README.assets/image-20220426094940549.png)
+
+- 선언식, 표현식 함수의 타입은 모두 function으로 동일.
+- 선언식은 호이스팅 가능/ 표현식은 불가능
+
+### Arrow Function
+
+- 화살표 함수(Arrow Function) : 함수를 비교적 간결하게 정의할 수 있는 문법
+
+```js
+const arrow1 = function(name) {
+	return `hello, ${name}`
+}
+// 1. function 키워드 삭제
+const arrow2 = (name) => {return }
+// 2. 매개변수가 1개일때, ( ) 생략가능
+const arrow3 = name => {return `hello, ${name}`}
+// 3, 함수 바디가 return 을 포함한 표현식 1개일 경우
+const arrow4 = name => `hello ${name}`
+```
+
+- 위와 같은 식으로 화살표 함수는 간단하게 작성할 수 있다.
+
+### 문자열(String)
+
+![image-20220426154241402](README.assets/image-20220426154241402.png)
+
+- string.includes(value) : string에 value가 존재하는지 T/F 반환
+- string.split(value) : value로 나눈 배열을 반환(값이 없거나, 빈 문자열일 수 있다.)
+- string.replace(from,to)/ string.replaceAll(from,to) : string에 from 값이 존재하면 1개 또는 모두 to 값으로 교체하여 반환
+- string.trim() : 공백문자(스페이스, 탭, 엔터 등) 제거후 반환
+
+### 배열(Arrays)
+
+#### 배열의 정의와 특징
+
+- 키와 속성들을 담고 있는 참조 타입의 객체(object)
+- 순서 보장(iterable)
+
+![image-20220426154641901](README.assets/image-20220426154641901.png)
+
+- array.indexOf(value) : array에 value 값이 존재하는 가장 첫번째 요소의 index 반환/ 없으면 -1 반환
+- array.join([separator]) : 배열의 모든 요소를 separator(구분자)로 연결하여 반환
+- Spread operator(...): 사용하면 배열 내부에서 배열 전개 가능/ 얉은 복사
+
+![image-20220426155207216](README.assets/image-20220426155207216.png)
+
+```js
+// element = 배열요소, array = 배열 그 자체
+array.forEach((element,index,array) => {
+    실행
+}) // 반환값 없음
+array.map((element,index,array) => {
+    실행
+}) // 함수의 반환값을 요소로 하는 새로운 배열 반환
+array.filter((element,index,array) => {
+    실행
+}) // 함수의 반환값이 true인 요소들만 모아서 새로운 배열 반환
+// acc = 이전 callback에서 반환 값이 누적되는 변수, initialValue(선택적) = 최초 callback 호출 시 acc에 할당되는 값. default는 arr의 첫번째 값이다.
+array.reduce((acc, element, index, array) => {
+    실행
+}, initialValue)
+array.find((element, index, array)){
+    실행
+} // arr의 각 element에 대해 callback 한번씩 실행. callback의 반환 값이 참이면 조건에 만족하는 첫번째 element 반환.
+array.some((element, index, array) => {
+    실행
+}) // array의 element 중 하나라도 판별함수를 통과하면 true 반환/ 하나도 없으면 false
+array.every((element, index, array) => {
+    실행
+}) // array의 모든 element가 판별함수를 통과하면 true/ 하나라도 통과 못하면 false
+```
+
+![image-20220426162618011](README.assets/image-20220426162618011.png)
+
+
+
+### 객체(Objects)
+
+- 객체 : 속성(property)의 집합, 중괄호 내부에 key와 value의 쌍으로 표현/ key는 문자열만 가능하다
+
+#### 객체 관력 ES6 문법
+
+- 속성명 축약(shorthand) : 객체를 정의할 때 key와 할당하는 변수의 이름이 같으면 축약가능
+
+```js
+const books = ['1','2']
+const magazines = ['a','b']
+const bookshop = {
+	books,
+	magazines,
+} // 변수 이름(books, magazine)를 key로 갖는 객체 생성
+```
+
+- 구조 분해 할당(destructing assighment) : 배열 또는 객체를 분해하여 속성을 변수에 쉽게 할당할 수 있는 문법
+
+```js
+const userInfo = {
+	name:'name1',
+	id : '11233'
+}
+const { name } = userInfo
+const { id } = userInfo // userInfo의 name과 id의 값을 갖는 변수 name, id가 생성 된다.
+```
+
+- Spread operator(...) : 해당 연산자를 활용하면 객체 내부에서 객체를 전개 가능하다./ 얕은 복사
+- (+) 배열은 객체다! : index를 key로 갖는 객체로, length 프로퍼티를 갖는 특수한 객체이다.
+
+### this 정리
+
+- JS의 this는 실행 문맥(execution context)에 따라 다른 대상을 가리킨다.
+- class 내부의 생성자 함수/ 메서드 이 두가지 경우를 제외하면 모두 최상위 객체(window)를 가리킨다.
+
+![image-20220426164906629](README.assets/image-20220426164906629.png)
+
+### lodash
+
+#### A modern JavaScript utility libray
+
+- 모듈성, 성능 및 추가 기능을 제공하는 JS 유틸리티 
+- 사용예시
+
+![image-20220426165100760](README.assets/image-20220426165100760.png)
+
+- lodash를 사용하지 않을 경우, 깊은 복사와 같은 함수를 직접 만들어 구현해야함.
