@@ -97,6 +97,7 @@ consoloe.log(x)
     ![image-20220425144337318](README.assets/image-20220425144337318.png)
   - Boolean : true/ false
     ![image-20220425144351721](README.assets/image-20220425144351721.png)
+    - 위는 ToBoolean Conversions(자동 형변환)에 대한 표,
     - Js에서는 빈 배열이라도 참값이 나옴.
 
 #### 참조 타입(Reference type) 
@@ -104,11 +105,20 @@ consoloe.log(x)
 
 #### 연산자
 - 할당 연산자 : +=, -=, *=, /=, ++, --
+
 - 비교 연산자 : > <
   동등 비교 연산자(==) : 특별한 경우 제외하고 **사용하지 않음**( 파이썬의 그것과 다름)
-  일치 비교 연산자(===) : 엄격한 비교가 이뤄짐(파이썬의 ==와 같음)
+  **일치 비교 연산자(===) : 엄격한 비교가 이뤄짐(파이썬의 ==와 같음)**
+  
 - 논리 연산자 :&&, ||, ! 의 and, or, not 사용
-- 삼항 연산자(Ternary Operator) : 조건식 ? a : b의 식으로 표현됨. 조건식이 참이면 a를, 조건식이 거짓이면 b를 반환한다.
+
+- **삼항 연산자(Ternary Operator) : 조건식 ? a : b의 식으로 표현됨. 조건식이 참이면 a를, 조건식이 거짓이면 b를 반환한다.**
+
+  ```js
+  console.log((a가 b보다 ~한가요?) ? 1 : 2) // a가 b보다 ~한다면(true) 1할당, 아니라면(false) 2를 할당한다.
+  ```
+
+  
 
 ### 조건문
 ####  if
@@ -212,8 +222,6 @@ for (const fruit of fruits){
 
 ### 함수
 
-### 함수
-
 -  참조 타입 중 하나로써 function 타입에 속함.
 -  Js에서 함수는 일급객체(first-class citizen)이다.(변수 할당가능, 함수의 매개변수전달, 함수의 반환값으로 사용가능)
 
@@ -223,27 +231,29 @@ for (const fruit of fruits){
 
 ```js
 //함수 선언식
-function name(args) {
-	// 실행
+function 함수의이름(매개변수) {
+	몸통(실행내용)
 }
-//함수 표현식
-const name = function (args) {
-	//실행내용
+//함수 표현식 - 익명 함수로 정의 가능.
+const 함수이름(생략가능) = function (매개변수) {
+	몸통(실행내용)
 }
 ```
 
 - function()의 괄호안에 기본인자를 설정 가능하다.
-- 매개변수와 인자의 개수가 불일치할 경우 많으면 무시하고 부족하면 undefined로 대체하여 함수를 실행한다.
+- 매개변수와 **인자의 개수가 불일치**할 경우 많으면 무시하고 부족하면 undefined로 대체하여 함수를 실행한다.
 
 ###### Rest operator
 
-- rest operator()를 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 **받는다.**
+- rest operator(...)를 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 **받는다.**
 
 ```js
 const restOpr = function(arg1, arg2, ...restArgs) {
 	return [arg1,arg2,restArgs]
 }
 ```
+
+​	- ...restArgs에 해당하는 인자들은 취합되어 리스트([a,b,c,..])의 형태로 받아짐.
 
 ###### Spread operator
 
@@ -256,6 +266,8 @@ const spreadOpr = function(arg1,arg2,arg3){
 const numbers = [1,2,3]
 spreadOpr(...numbers) // 6 출력
 ```
+
+​	- numbers의 인자들이 ...numbers를 통해 뿌려지게 됨.	
 
 ### 선언식 vs 표현식 
 
@@ -287,9 +299,9 @@ const arrow4 = name => `hello ${name}`
 ![image-20220426154241402](README.assets/image-20220426154241402.png)
 
 - string.includes(value) : string에 value가 존재하는지 T/F 반환
-- string.split(value) : value로 나눈 배열을 반환(값이 없거나, 빈 문자열일 수 있다.)
+- string.split(token) : token로 나눈 배열을 반환(기준이 되는 token줘야함! 없으면 string 그대로 출력.)
 - string.replace(from,to)/ string.replaceAll(from,to) : string에 from 값이 존재하면 1개 또는 모두 to 값으로 교체하여 반환
-- string.trim() : 공백문자(스페이스, 탭, 엔터 등) 제거후 반환
+- string.trim() : 공백문자(스페이스, 탭, 엔터 등) 제거후 반환/ trimStart(), trimEnd()
 
 ### 배열(Arrays)
 

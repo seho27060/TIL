@@ -32,7 +32,7 @@
 
 ![image-20220427093330991](README.assets/image-20220427093330991.png)
 
-#### DOM 선택 - 선택 관련 메서드
+#### DOM **선택** - 선택 관련 메서드
 - document.querySelector(selector) : 제공한 선택자와 일치하는 element 하나 선택/CSS selector를 만족하는 첫 번째 element 객체를 반환
 - document.querySelectorAll(selector) : 제공한 선택자와 일치하는 여러 element를 선택/ 일치하는 NodeList를 반환
 	- 위 두개 메서드는 id, class, tag 등을 선택자로 사용가능하여, 구체적이고 유연하게 사용 가능하다.
@@ -40,12 +40,14 @@
 - 배열과 같이 각 항목에 접근하기 위한 index 제공(유사 배열)
 - HTMLCollection : name, id, index 속성으로 각 항목에 접근 가능
 - NodeList : index로만 각 항목에 접근 가능/ HTMLCollection 과 달리 forEach와 같은 배열에서 사용하는 메서드 사용가능
-- 위 두개는 Live Collection으로 변경사항이 실시간으로 반영하지만, querySelectorAll()에 의해 반환되는 NodeList는 Static Collection으로 실시간 반영 X
+- 위 두개는 Live Collection으로 변경사항이 실시간으로 반영하지만, **querySelectorAll()에 의해 반환되는 NodeList는 Static Collection으로 실시간 반영 X**
 
 #### DOM 선택 - Collection
 - Live Collection : 문서(HTML)의 변경에 실시간 반영
+
 - Static Collection : 문서의 변경이 실시간 반영 X
-- 
+
+  
 #### DOM 변경 - 변경 관련 메서드
 - document.createElement() : 작성한 태그 명의 HTML element 생성 반환
 - Element.append() : 특정 부모 Node의 자식 NodeList 중 마지막 자식 다음에 추가/ 여러개이 Node객체, DOMString 추가가능/반환값 X
@@ -67,7 +69,7 @@
 
 #### DOM 삭제 - 삭제 관련 메서드
 - ChildNode.remove() : Node가 속한 트리에서 해당 Node를 제거
-- Node.removeChild() : DOM에서 자식 Node를 제거하고 제거된 Node를 반환
+- Node.removeChild(node) : DOM에서 자식 Node를 제거하고 제거된 Node를 반환
 
 #### DOM 속성 - 속성 관련 메서드
 - Element.setAttribute(name, value) : 지정된 element의 name의 value를 설정/ name이 이미 있다면 갱신, 없다면 추가의 기능을 한다.
@@ -80,7 +82,7 @@
 ### Event
 ####  Event(이벤트) 개념
 - 네트워크 활동이나 사용자와의 상호작용 같은 사건의 발생을 알리기 위한 객체
-- 이벤트는 마우스 클릭, 키보드 사용 드으이 사용자 행동으로 발생한다.
+- 이벤트는 마우스 클릭, 키보드 사용 등의 사용자 행동으로 발생한다.
 
 #### Event 기반 인터페이스
 - AnimationEvent, ClipboardEvent, DragEvent 등
@@ -89,7 +91,7 @@
 
 #### Event handler - addEventListener()
 - EventTarget.addEventListener() : 지정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정/ 이벤트에 지원하는 모든 객체(Element, Document, Window) 를 대상으로 지정 가능
-- target.addEventListener(type, listener[, optins])
+- target.addEventListener(type, listener[, options])
 	- type : 반응 할 이벤트 유형('input','scroll','click' 등등)/ listener : 지정된 타입의 이벤트가 발생했을 때 알림을 받는 객체(EventListener인터페이스 or JS function 객체여야 함/ 이벤트 발생시 수행되는 객체(ex: 함수))
 	- listener에 function() 이 아닌 function을 넣는다.(결과를 넣는냐, 하는 방법을 넣느냐의 차이)
 - **"대상(EventTarget)에 특정 이벤트(type)가 발생하면, 할 일(listener)을 등록하자." : EventTarget.addEventListener(type, listener)**
