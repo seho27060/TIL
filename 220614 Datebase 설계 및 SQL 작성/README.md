@@ -159,7 +159,9 @@
 		- fk2. 담당프로
 		- fk3. 교육생
 	
-	![Untitled Diagram (2)](README.assets/Untitled Diagram (2).jpg)
+	![ERD](README.assets/ERD.jpg)
+	
+	
 
 
 
