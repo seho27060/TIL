@@ -54,7 +54,12 @@ expirt default router
 4. 출력창에서 getters를 import 하여 출력한다.
 
 ## Vuex - Component 구성
-### accounts Login
+- 무조건 store - state에 데이터를 저장하는게 아닌, 컴포넌트 내부, 컴포넌트 간, 등 관계와 상황에 따라 컴포넌트 내에서 state를 설정하여 사용하던지, store에서 데이터를 import하던지 결정하도록 한다.(무조건 중앙통제로 데이터 저장하는건 옳지않다.)
+
+### Accounts Login
+
+- 비동기 통신(axios)로 백엔드 서버와 통신
+- saveToken, 사용 유저 변경.
 
 ### Article Read/ Like
 #### Read
@@ -62,8 +67,19 @@ expirt default router
 #### Like
 
 
-### Artcile CUD
+### Artcle CUD
 #### Create
 - vuex 에서 관련 action 선언
 	- axios로 url, method 설정
 	-  vue에서 input 데이터를 받고 actions의 axios에 사용한다.
+
+
+
+### Comment CRUD
+#### Create
+#### Read
+
+- 굳이 store에 저장하지 않고 두 개의 Vue instance 관계간 데이터 교환(props, emit)을 사용하여도 된다.(상황에 따라 적절히)
+
+#### Update
+#### Delete
