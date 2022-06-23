@@ -110,8 +110,3 @@ body
 
 
 
-## TypeScript
-
-### index1
-
-#### detail-index1
