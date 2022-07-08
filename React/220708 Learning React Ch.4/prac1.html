@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>순수 리액트 예제</title>
+</head>
+<body>
+  <div id = "root">
+
+  </div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+  <script>
+    var dish = React.createElement("h1", null, "구운 연어")
+  
+
+    const recipe = ["salmon 900g", "fresh rosemary", "olive oil","small remon slice","salt 1 tea spoon","mashed garlic"]
+    // const list = React.createElement(
+    //   "ul",
+    //   null,
+    //   React.createElement("li",null,"salmon 900g"),
+    //   React.createElement("li",null,recipe[1]),
+    //   React.createElement("li",null,recipe[2]),
+    //   React.createElement("li",null,recipe[3]),
+    //   React.createElement("li",null,recipe[4]),
+    //   React.createElement("li",null,recipe[5]),
+    // )
+    
+    const list = React.createElement(
+      "ul",
+      {className : "ingredients"},
+      recipe.map((ingridient, i) => React.createElement('li',{key:i},ingridient)))
+    const result = React.createElement(
+      "section",
+      {id : "baked-salmon"},
+      dish,
+      list,
+    )
+    ReactDOM.render(result, document.getElementById('root'))
+  </script>
+</body>
+</html>
