@@ -1,0 +1,35 @@
+[
+  {
+    "name":"baked salmon",
+    "ingredients" : [
+      { "name" : "salmon", "amount": 500, "measurement":"gram"},
+      { "name": "butter lettuece", "amount" : 2, "measurement":"cup" },
+      { "name" : "yellow squash", "amount" : 1, "measurement":"unit" },
+      { "name": "olive oil", "amount" : 0.5, "measurement":"cup"},
+      {"name" : "garlic", "amount" : 3, "measurement":"unit" }
+    ],
+    "steps": [
+      "hit the oven to 350",
+      "pour olive oil in the glass baking bour",
+      "put salmon, garlic, nut in the bour",
+      "bake ingredients in the bour 15 minutes",
+      "add yellow squash bake the bour 30 minutes again",
+      "put out the bour, cool down about 15 minutes. put some butter lettuce and all done"
+    ]
+  },
+  {
+    "name":"fish taco",
+    "ingredients" : [
+      { "name" : "white fish", "amount": 500, "measurement":"gram"},
+      { "name" : "cheese", "amount" : 1, "measurement":"cup" },
+      { "name" : "icebug lettuce", "amount" : 2, "measurement":"cup" },
+      { "name" : "tomato", "amount" : 2, "measurement":"unit" },
+      { "name" : "tortia", "amount" : 3, "measurement":"unit" }
+    ],
+    "steps": [
+      "bake fist on the grill",
+      "put baked fish on the three of tortia",
+      "add lettuce, tomato and cheese. it is all done"
+    ]
+  }
+]
