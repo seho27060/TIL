@@ -11,6 +11,8 @@
       - [2.3 더 많은 컴포넌트 만들기](#23-더-많은-컴포넌트-만들기)
     - [3. State](#3-state)
       - [조건부 연산자(JavaScript)](#조건부-연산자javascript)
+    - [Event props](#event-props)
+      - [Event](#event)
 
 # udemy React
 
@@ -176,3 +178,38 @@ function Todo(props) {
 - &&, || 연산자(단축평가)
   1. || 연산자 : `A || B`라고 할때 true 인 값(함수, 변수 등 모두 포함)을 반환 
   2. && 연산자 : `A && B`라고 할때 둘다 ture 라면 오른쪽(B)값을 반환한다. 둘 중 하나라도 false 라면 false를 반환한다.
+
+### Event props
+- 모든 커스텀 컴포넌트에서 Event 를 사용할 경우 props를 필수로 사용해야 한다.
+#### Event
+- html 상의 `<div>`태그와 같은 컴포넌트는 기본적으로 `onClick`과 같은 Event가 내장되어 있다.
+- `React`에서는 커스텀 컴포넌트를 사용할 경우 기본 컴포넌트의 Evnet와 연결하여 사용한다.
+```react
+    <div className="actions">
+      <button className="btn" onClick={deleteHandler}>Delete</button>
+    </div>
+    { modalIsOpen  && <Modal onCancel = {closeModalHandler} onConfirm = {closeModalHandler}/>} // Modal 커스텀 컴포넌트에 onCancel 이라는 props에 함수를 대입해준다.
+    { modalIsOpen  && <Backdrop onClick = {closeModalHandler}/>}
+  </div>
+
+  /// Modal.js
+  function Modal(props){
+  function cancelHandler() {
+    props.onCancel()
+  }
+
+  function confirmHandler(){
+    props.onConfirm()
+  }
+  return(
+    <div className="modal">
+      <p>Are you Sure?</p>
+      <button className="btn btn--alt" onClick={cancelHandler}>Cancel</button> // 기본 컴포넌트인 button에서는 내장된 onClick 이벤트를 props.onCancel을 실행하는 함수 cancelHandler를 연결하여 실행시킨다.
+      <button className="btn" onClick={confirmHandler}>Confirm</button>
+    </div>
+  )
+}
+
+export default Modal
+```
+- 커스텀 컴포넌트에 이벤트를 연결하기 위해 어떤 Event 와 props가 연결되는지 확인하자.
