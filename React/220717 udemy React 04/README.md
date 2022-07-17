@@ -1,4 +1,15 @@
-[toc]
+- [udemy React](#udemy-react)
+  - [React 04](#react-04)
+    - [Http용 앱 준비하기](#http용-앱-준비하기)
+      - [POST 요청 보내기](#post-요청-보내기)
+        - [fetch](#fetch)
+        - [JSON.stringfy](#jsonstringfy)
+    - [요청후 사용자에게 피드백 전달](#요청후-사용자에게-피드백-전달)
+      - [useNavigate](#usenavigate)
+    - [데이터 가져오기](#데이터-가져오기)
+      - [렌더링 전 데이터 요청](#렌더링-전-데이터-요청)
+    - [useEffect 훅 사용하기](#useeffect-훅-사용하기)
+      - [useEffect](#useeffect)
 # udemy React
 ## React 04
 ### Http용 앱 준비하기
