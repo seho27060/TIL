@@ -1,4 +1,15 @@
-[toc]
+- [udemy React](#udemy-react)
+  - [React 03](#react-03)
+    - [props.chidren을 사용하여 wrapper 컴포넌트 만들기](#propschidren을-사용하여-wrapper-컴포넌트-만들기)
+      - [Card 컴포넌트](#card-컴포넌트)
+      - [Layout 컴포넌트](#layout-컴포넌트)
+        - [왜 이렇게 하는걸까?](#왜-이렇게-하는걸까)
+    - [양식 추가하기.](#양식-추가하기)
+      - [입력 form 컴포넌트](#입력-form-컴포넌트)
+      - [form submit](#form-submit)
+        - [eventHandler](#eventhandler)
+        - [event.preventDefault](#eventpreventdefault)
+        - [useRef](#useref)
 # udemy React
 ## React 03
 ### props.chidren을 사용하여 wrapper 컴포넌트 만들기
@@ -164,3 +175,5 @@ function submitHandler(event) {
     // 데이터를 저장하여 처리하든, 반환하여 DB에 전송한다.
   }
   ...
+- `useRef.current.value` : 현재 참조 객체의 값
+- '이름' 항목이 필수 입력값일때 이름을 입력 -> (참조객체에 `<input>`와 연결됨 ) -> `submit` 실행 = `submitHandler` 함수 실행 -> 기본 `submit`을 막고 참조객체는 연결된 `<input>`의 값을 갖는다.
