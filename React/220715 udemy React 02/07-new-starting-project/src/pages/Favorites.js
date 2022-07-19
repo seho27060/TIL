@@ -8,9 +8,12 @@ function FavoritePage() {
 
   let content
 
-  if (favoriteCtx.totlaFavorites === 0){
-    content =  <MeetupList meetups = {favoriteCtx.favotires}/>
-
+  if (favoriteCtx.totalFavorites === 0){
+    content = <p>You got no favorites yetm Start adding Some?</p>
+  } else {
+    console.log(favoriteCtx.totalFavorites)
+    console.log(favoriteCtx.favorites)
+    content =  <MeetupList meetups = {favoriteCtx.favorites}/>
   }
   return (
     <section>
