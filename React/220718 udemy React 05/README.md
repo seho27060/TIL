@@ -1,4 +1,15 @@
-[toc]
+- [udemy React](#udemy-react)
+  - [React 05](#react-05)
+    - [리액트 컨텍스트](#리액트-컨텍스트)
+    - [Context](#context)
+      - [context 객체 생성](#context-객체-생성)
+      - [context Provider 함수](#context-provider-함수)
+        - [addFavoriteHandler](#addfavoritehandler)
+        - [removeFavoriteHandler](#removefavoritehandler)
+        - [itemIsFavoriteHandler](#itemisfavoritehandler)
+    - [컴포넌트에서의 컨텍스트 사용](#컴포넌트에서의-컨텍스트-사용)
+      - [useContext](#usecontext)
+    - [더 많은 컨텍스트 사용하기](#더-많은-컨텍스트-사용하기)
 # udemy React
 ## React 05
 ### 리액트 컨텍스트
@@ -65,7 +76,7 @@ function FavoritesContextProvider(props) {
     return userFavorites.some(meetup => meetup.id === meetupId)
   }
   ...
-
+```
 ##### addFavoriteHandler
 - 새로운 favoriteMeetup을 이전 리스트에 추가하여 반환
 - **.concat** : 해당 배열에 인수 값을 더한 새로운 배열을 반환
