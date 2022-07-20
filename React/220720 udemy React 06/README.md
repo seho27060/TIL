@@ -25,7 +25,142 @@
 - `Redux`에서 데이터의 업데이트를 담당함.
 - 데이터의 입력을 변환하여 반환
 - Mutate Store Data
+- input : Old State + Dispatched Action
+- output : New State Object
+- 순수 함수로 어떤 input에 대해 같은 output을 반환한다. 
+
 
 ##### Action
 - Component에서 Dispatch를 수신받아, Reducer로 전달하면 새로운 상태로 갱신한다.
 - State이 변경에 따라 Subscription한 컴포넌트에서는 UI를 업데이트한다.
+
+### redux 이해하기
+- redux-demo
+```javascript
+const redux = require("redux");
+
+const counterReducer = (state = { counter: 0 }, action) => {
+  if (action.type === "increment") {
+    return {
+      counter: state.counter + 1,
+    };
+  }
+
+  if (action.type === "decrement") {
+    return {
+      counter: state.counter - 1,
+    };
+  }
+  return state;
+};
+const store = redux.createStore(counterReducer);
+
+// console.log(store.getState())
+
+const counterSubscriber = () => {
+  const latestState = store.getState();
+  console.log(latestState);
+};
+
+store.subscribe(counterSubscriber);
+
+store.dispatch({ type: "increment" });
+store.dispatch({ type: "decrement" });
+```
+#### redux 관련 함수
+##### store.getState()
+- store에 저장된 최신의 state 반환
+
+##### store.subscribe(function)
+- state가 변경될때마다 function 실행
+
+##### store.dispatch({ type: "orderString"}) 
+- store의 orderString의 dispatch 실행
+
+## redux 프로젝트
+```git bash
+$git install redux react-redux
+```
+- `react-redux` : react와 redux를 연결, 리덕스 스토어에 컴포넌트를 서브스크라이브 등의 기능을 함
+
+#### 스토어 형성
+```react
+import {createStore} from 'redux'
+
+const counterReducer = (state = {coutner : 0}, action) => {
+  if (action.type === "increment"){
+    return {
+      counter : state.counter + 1,
+    }
+  }
+
+  if (action.type === "decrement"){
+    return {
+      counter : state.counter - 1,
+    }
+  }
+
+  return state
+}
+
+const store = createStore(counterReducer)
+```
+- 리듀서 함수 생성후 store 로 포인터를 지정한다.
+- 
+#### 리듀서 함수 생성
+- action.type에 따라 다른 실행 설정
+
+#### 리액트 앱과 리덕스 스토어 연결하기
+- 이후에 컴포넌트가 스토어를 서브스크라이브한다.
+
+### 스토어 제공하기
+- 위 과정을 통해 `redux`를 활용하여 `store`를 형성하였다.
+- 하지만 아직 `react`의 `App`과 `redux`의 store를 연결하지 않았다.
+- `react-redux`에서 제공하는 `Provider` 컴포넌트를 활용하여 연결해보자.
+
+```react
+/// App.js(리액트 App의 최상위 레벨)
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+
+import "./index.css";
+import App from "./App";
+import store from "./store/index";
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
+```
+- `Provider` 컴포넌트를 import하여 store에 `redux`의 `store`를 prop하였다.
+- 해당 작업을 통해 `App`를 포함한 그 자식 컴포넌트 모두는 `store`에 dispatch, subscribtion, tab(데이터 가져오기) 가 가능하다.
+
+### 리액트 컴포넌트에서 리덕스 스토어 데이터(State) 사용하기
+#### useSelector
+- 리덕스 팀에서 만든 리액트 커스텀 훅
+- 자동으로 상태의 일부를 선택가능하게 해줌
+- useStore보다 편하다고함.
+- 포함된 컴포넌트를 자동으로 store를 subscibe 한다. 따라서 store의 state상태에 따라 자동 실행/갱신된다.
+
+```react
+import { useSelector } from 'react-redux' // useSelector 를 import 
+
+import classes from './Counter.module.css';
+
+const Counter = () => {
+  const counter = useSelector(state => state.counter) // counter 에 store의 counter를 할당한다. state의 변화가 감지될시, 자동으로 해당 컴포넌트를 재실행한다.
+  
+  const toggleCounterHandler = () => {};
+
+  return (
+    <main className={classes.counter}>
+      <h1>Redux Counter</h1>
+      <div className={classes.value}>{counter}</div>
+      <button onClick={toggleCounterHandler}>Toggle Counter</button>
+    </main>
+  );
+};
+```
