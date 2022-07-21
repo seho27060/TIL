@@ -141,7 +141,7 @@ ReactDOM.render(
 ### 리액트 컴포넌트에서 리덕스 스토어 데이터(State) 사용하기
 #### useSelector
 - 리덕스 팀에서 만든 리액트 커스텀 훅
-- 자동으로 상태의 일부를 선택가능하게 해줌
+- 자동으로 `state`의 일부를 선택가능하게 해줌 
 - useStore보다 편하다고함.
 - 포함된 컴포넌트를 자동으로 store를 subscibe 한다. 따라서 store의 state상태에 따라 자동 실행/갱신된다.
 
