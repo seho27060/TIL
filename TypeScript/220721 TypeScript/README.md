@@ -1,4 +1,15 @@
-[toc]
+- [**udemy React + TypeScript**](#udemy-react--typescript)
+  - [What is TypeScript?](#what-is-typescript)
+    - [Typescript](#typescript)
+    - [기본](#기본)
+      - [변수 선언](#변수-선언)
+      - [배열 선언](#배열-선언)
+      - [객체 선언](#객체-선언)
+    - [type inference(타입 추론)](#type-inference타입-추론)
+    - [union type](#union-type)
+    - [Type Aliases](#type-aliases)
+    - [함수 및 함수 유형](#함수-및-함수-유형)
+    - [Generics](#generics)
 # **udemy React + TypeScript**
 ## What is TypeScript?
 - javascript의 superset 언어
@@ -62,7 +73,53 @@ course = 1234 // 오류 발생
 
 ### union type
 - 한개의 변수에 여러개의 타입을 지정할 수 있을까?
+```typescript
 let course: string | number = "react - omplete"
 course = 1234 
 ```
 - 위 선언으로 `course`는 두개의 타입(string, number)을 가질 수 있는 변수가 되었다.
+
+### Type Aliases
+- Type Alias(타입 별칭) : 사용자가 정의한 타입을 사용하는 것.
+- **TypeScript**에서만 존재하는 기능
+```typescript
+type newTypeName = {
+    name: string
+    age : number
+}
+let newType : newTypeName
+let newType : newTypeName[]
+```
+
+### 함수 및 함수 유형
+![img1](img/img1.png)
+- 타입 추론에 의해 add 함수의 type이 number로 추론됨을 확인 할 수 있다.
+- 함수 유형(function type) 또한 지정 가능하나, 되도록 하지 않는다. typesctipt의 추론을 따른다.
+
+![img2](img/img2.png)
+- 위와 같이 반환값이 없는 함수의 경우 type은 `void`이다.
+
+### Generics
+```typescript
+function insertAtBeginning(array:any[], value:any){
+  const newArray = [value,...array]
+  return newArray
+}
+
+const demoArray = [1,2,3]
+
+const updatedArray = insertAtBeginning(demoArray, -1)
+```
+![img3](img/img3.png)
+- 이와 같이, `insertAtBeginning`함수 선언에서 입력 인자들을 `any`인자로 받았다고 해서 실제 값이 `number`가 들어가고 반환 역시 `number`여도 함수의 반환값은 선언때의 `any`로 유추된다.
+- Generics은 보다 유연하고 안정적인 유추가 가능하게 한다.
+
+```typescript
+function insertAtBeginning<T>(array:T[], value:T){
+  const newArray = [value,...array]
+  return newArray
+}
+```
+- `<GenericsName>` 을 함수 뒤에 붙이고 입력인자의 타입을 `GenericsName`으로 지정해주면 Generics 함수 선언이 완료된다.
+![imng4](img/img4.png)
+- 위와 같이 선언할때 Generics 형식으로 선언했기 때문에, 입력값과 반환값에 따라 유추가 진행된다.
