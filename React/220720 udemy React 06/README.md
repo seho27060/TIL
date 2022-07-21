@@ -1,4 +1,23 @@
-[toc]
+- [udemy React](#udemy-react)
+  - [react 06](#react-06)
+    - [Redux](#redux)
+      - [What is "Redux"?](#what-is-redux)
+        - [State의 3가지 종류](#state의-3가지-종류)
+      - [Redux 작동 방식](#redux-작동-방식)
+        - [Reducer Function](#reducer-function)
+        - [Action](#action)
+    - [redux 이해하기](#redux-이해하기)
+      - [redux 관련 함수](#redux-관련-함수)
+        - [store.getState()](#storegetstate)
+        - [store.subscribe(function)](#storesubscribefunction)
+        - [store.dispatch({ type: "orderString"})](#storedispatch-type-orderstring)
+  - [redux 프로젝트](#redux-프로젝트)
+      - [스토어 형성](#스토어-형성)
+      - [리듀서 함수 생성](#리듀서-함수-생성)
+      - [리액트 앱과 리덕스 스토어 연결하기](#리액트-앱과-리덕스-스토어-연결하기)
+    - [스토어 제공하기](#스토어-제공하기)
+    - [리액트 컴포넌트에서 리덕스 스토어 데이터(State) 사용하기](#리액트-컴포넌트에서-리덕스-스토어-데이터state-사용하기)
+      - [useSelector](#useselector)
 # udemy React 
 ## react 06
 ### Redux
@@ -154,7 +173,7 @@ import classes from './Counter.module.css';
 
 const Counter = () => {
   const counter = useSelector(state => state.counter) // counter 에 store의 counter를 할당한다. state의 변화가 감지될시, 자동으로 해당 컴포넌트를 재실행한다.
-  
+
   const toggleCounterHandler = () => {};
 
   return (
