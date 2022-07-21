@@ -12,6 +12,9 @@
       - [createSlice](#createslice)
       - [configureStore](#configurestore)
       - [slice의 action에 접근하기](#slice의-action에-접근하기)
+    - [**다중 슬라이드 관리하기**](#다중-슬라이드-관리하기)
+      - [새 슬라이드에서 데이터 가져오기 및 dispatch하기](#새-슬라이드에서-데이터-가져오기-및-dispatch하기)
+    - [코드 분할하기](#코드-분할하기)
 # **udemy React**
 
 ## **React 07**
@@ -265,5 +268,67 @@ import { counterActions } from '../store';
     dispatch(counterActions.toggleCounter())
   };
 ```
+- `redux toolkit`은 자동으로 reducer에 생성자를 설정한다. action에 할당된 값은 `payload`로 접근한다.
 
 
+### **다중 슬라이드 관리하기**
+- 기존의 slice외에 새로운 slice를 추가하였을때,
+```react
+const initialAuthState = {
+  isAuthenticated : false,
+}
+
+const authSlice = createSlice({
+  name:"authentication",
+  initialState: initialAuthState,
+  reducer :{
+    login(state) {
+      state.isAuthenticated = true
+    },
+    logout(state) {
+      state.isAuthenticated = false
+    },
+  }
+})
+```
+- 슬라이스 추가
+
+```react
+const store = configureStore({
+  // reducer: counterSlice.reducer
+  reducer: { counter : counterSlice.reducer, auth : authSlice.reducer }
+})
+```
+- 각 slice에 접근할 unique한 key값을 지정하고 해당 slice의 reducer 함수를 등록해준다.
+
+-`state.counter`에서 `state.counter.counter`으로 접근해야한다. 전자는 slice를 1개만 연결했을때여서 key값이 없어서 바로 접근이 가능하다.
+
+#### 새 슬라이드에서 데이터 가져오기 및 dispatch하기
+- Store에서 state 가져오기
+  - `useSelector(state => state.sliceName.valueName)`를 변수에 할당
+- dispatch 하기
+  - `store`에서 사용할려는 action을 import
+  - `const dispatch = useDispatch`와 같이 dispatch 객체 생성
+  - `dispatch(storeActions.actionName(payload))`로 dispatch 전송.
+  - 여러개의 payload 할때는.. 어떻게하지? -> 여러개의 값을 갖는 배열, 객체를 payload로 주면된다.
+
+### 코드 분할하기
+- 하나의 store.index.js 파일로 관리하기엔 무리가 있으므로, 코드를 나눠 관리하자.
+- `store`폴더 내에서 여러개의 js 파일로 분리하여 기능별로 store들을 관리하도록 하자.
+- 이후에 `index.js`파일과 같은 공통 store 파일에서 모든 store를 통합하여 하나의 리듀서 함수 모음을 갖추도록 한다.
+
+```react
+import { configureStore } from '@reduxjs/toolkit'
+
+import counterReducer from './counter' // counter store import
+import authReducer from './auth' // auth store import
+
+const store = configureStore({
+  // reducer: counterSlice.reducer
+  reducer: { counter : counterReducer, auth : authReducer }
+}) // configureStore로 여러개의 store를 1개의 store로 통합
+
+
+export default store // 통합된 store를 export
+
+```
