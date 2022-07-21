@@ -8,6 +8,10 @@
     - [**리덕스 state를 올바르게 사용하는 방법**](#리덕스-state를-올바르게-사용하는-방법)
     - [**리덕스 도전과제 및 리덕스 툴킷 소개**](#리덕스-도전과제-및-리덕스-툴킷-소개)
       - [**리덕스에서 발생 가능한 잠재적 문제**](#리덕스에서-발생-가능한-잠재적-문제)
+    - [**redux toolkit**](#redux-toolkit)
+      - [createSlice](#createslice)
+      - [configureStore](#configurestore)
+      - [slice의 action에 접근하기](#slice의-action에-접근하기)
 # **udemy React**
 
 ## **React 07**
@@ -171,4 +175,95 @@ const counterReducer = (state = intialState, action) => {
 
 - `redux toolkit`으로 이 모든 문제를 해결 가능!
 
-####
+### **redux toolkit**
+- `redux toolkit`은 이미 `redux`를 포함하고 있으므로, `package.json`에 `redux`가 있다면 삭제하도록 한다.
+```bash
+$npm install @reduxjs/toolkit
+```
+#### createSlice
+- `redux toolkit`의 `createReducer`을 사용해도 되지만, Slice가 Reducer보다 강력(?)하므로 Slice를 사용하도록 한다.
+
+```react
+import { creatSlice } from '@reduxjs/toolkit'
+...
+
+createSlice({
+    name: "식별자",
+    initialState : "state의 초기값 할당",
+    reducers : {
+        "실행할 reducer 함수"(){
+            "실행내용"
+        },
+        ...
+    }
+})
+```
+- 주의해야할 점은, 기존의 `redux`에서는 state를 직접 변경할 수 없었다.
+- `redux toolkit`에서는 state를 직접 변경시, 자동으로 state 객체를 생성하고 변화된 인자를 반영하여 반환해준다.(state를 직접 변경하는것 처럼 보이지만, `redux toolkit`이 객체를 새롭게 생성하여 반영해줌.)
+
+- 하지만 **slice가 여러개** 라면?
+
+#### configureStore
+- 앱의 규모가 커짐의 따라 slice의 종류도 증가되는게 당연하다. 이때 여러개의 slice를 한개의 store에 연결하기 위해 `configureStore` 를 사용한다.
+
+```react
+import { createSlice, configureStore } from '@reduxjs/toolkit'
+```
+- `reduxjs/toolkit`에서 `configureStore` import
+
+```react
+const counterSlice = createSlice({
+  name : 'counter',
+  initialState : initialState,
+  reducers : {
+    increment(state) {
+      state.counter ++
+    },
+    decrement(state) {
+      state.counter --
+    },
+    increase(state, action) {
+      state.counter = state.counter + action.value
+    },
+    toggleCounter(state) {
+      state.showCounter = !state.showCounter
+    },
+  }
+})
+```
+- 위와 같이 slice를 생성하고
+
+```react
+const store = configureStore({
+  reducer: counterSlice.reducer
+  // reducer: { counter : counterSlice.reducer }
+})
+```
+- store에 slice를 1개 연결하거나, 객체를 두어 key값의 구분을 주어 여러개의 slice를 연결할 수 있다.
+
+#### slice의 action에 접근하기
+- slice의 reducer 들을 actions 로 접근하여 export 한다.
+```react 
+/// store/index.js
+export const counterActions = counterSlice.actions
+```
+- counterActions를 사용하려는 컴포넌트에서 import 
+```react
+import { counterActions } from '../store';
+```
+
+  아래와 같이 접근하면 slice에 포함된 reducer 함수를 사용 가능 하다.
+```react
+  }
+  const IncreaseHandler = () => {
+    dispatch(counterActions.increase(10))
+  }
+  const declementHandler = () => {
+    dispatch(counterActions.decrement())
+  }
+  const toggleCounterHandler = () => {
+    dispatch(counterActions.toggleCounter())
+  };
+```
+
+
