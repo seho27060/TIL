@@ -11,13 +11,15 @@
 3. App-Wide State : 전체 어플리케이션에 전역적으로 사용되는 State (ex : 유저 인증 상태, prop chaining,prop drilling )
 - `Context`를 통해 위 3개의 컴포넌트를 관리할 수 있다.
 
-- `Redux`는 `Context`의 복잡한 설정/ 관리, 비교적 낮은 성능과 같은 **잠재적**문제를 예방할 수 있다.
+- `Redux`는 `Context`의 복잡한 설정/ 관리, 비교적 낮은 성능과 같은 **잠재적** 문제를 예방할 수 있다.
 
 #### Redux 작동 방식
 - Redux는 하나의 유일한 **데이터(State,상태) 저장소**(Central Data(State) Store)
   - 공통된 데이터 저장소를 가지므로, prop drilling, prop chaining과 같은 방식이 아닌 바로 컴포넌트간을 prop 할 수 있다.
   - 물론 컴포넌트는 Store를 Subscription 해야한다.
 - 데이터는 무조건 **스토어 -> 컴포넌트**로 흐른다. 컴포넌트에서는 절대로 데이터를 수정할 수 없다.
+- 다만 컴포넌트에서 요청(dispatch)를 스토어로 보내어 데이터 갱신 요청을 할 수 있다.
+
 
 ![img1](./img/img1.jpg)
 
