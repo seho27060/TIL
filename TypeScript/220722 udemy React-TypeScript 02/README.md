@@ -19,6 +19,7 @@
 $npx create-react-app appName --template typescript
 ```
 - typescript를 javascript 로 변환하는 컴파일 과정이 추가되지만, 자동으로 진행되니 알고만 있자.
+
 ### **Props 및 Typescript 작업하기**
 ```react
 import React from "react";
@@ -32,9 +33,9 @@ const Todos: React.FC<{ items: string[] }> = (props) => {
     </ul>
   );
 };
-
 export default Todos;
 ```
+
 #### 함수 정의하기
 - Typescript에서의 그것과 같게, react에서 typescript를 활용할때도 함수의 인자 타입을 정의할 수 있다.
 - 인자의 타입은 다양하므로 **Generics(제네릭)** 타입으로 정의하도록 한다.
