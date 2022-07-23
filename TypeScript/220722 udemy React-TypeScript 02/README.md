@@ -23,9 +23,9 @@
       
       - [ContextProvider](#contextprovider)
         
-        # **udemy React + TypeScript**
         
-        ## **React + Typescript 프로젝트**
+# **udemy React + TypeScript**       
+## **React + Typescript 프로젝트**
 
 - TypeScript기반 react 프로젝트 생성하기
   
@@ -35,11 +35,10 @@
 
 - typescript를 javascript 로 변환하는 컴파일 과정이 추가되지만, 자동으로 진행되니 알고만 있자.
   
-  ### **Props 및 Typescript 작업하기**
+### **Props 및 Typescript 작업하기**
   
-  ```react
-    import React from "react";
-  ```
+```typescript
+import React from "react";
 
 const Todos: React.FC<{ items: string[] }> = (props) => {
   return (
@@ -52,7 +51,6 @@ const Todos: React.FC<{ items: string[] }> = (props) => {
 };
 
 export default Todos;
-
 ```
 #### 함수 정의하기
 - Typescript에서의 그것과 같게, react에서 typescript를 활용할때도 함수의 인자 타입을 정의할 수 있다.
@@ -72,7 +70,7 @@ const FunctionName: React.FC<{items: string[],}> = {props} =>{
 ```
 
 - `React.FC<{}>`의 중괄호({})에 props의 타입을 정의하도록 한다.
-- 위 예시에서 `props`의 chilren으로 `items`가 있음을 명시하고, `items`의 타입은 string을 갖는 array임을 명시하였다.
+- 위 예시에서 `props`의 children으로 `items`가 있음을 명시하고, `items`의 타입은 string을 갖는 array임을 명시하였다.
 - react와 typescript로 함수를 만들면 react의 FC를 통해 함수형 컴포넌트임을 명시하자
 
 ```typescript
@@ -163,9 +161,8 @@ function App() {
 - 기존의 방법과 매우 유사하며, 주의할 점은 `typescript`에서 했던것과 같이 input인자의 type을 잘 지정해주도록 한다.
 
 ```typescript
-  // NewTodo
-  import React from "react"
-
+// NewTodo
+import React from "react"
 
 const NewTodo= () => {
   const submitHandler =(event:React.FormEvent) => {
@@ -186,6 +183,7 @@ export default NewTodo
 
 - `const submitHandler =(event:React.FormEvent) =>`에서 input인 event에 대한 type을 지정해주고 있다.
 - `React.FormEvent`는 react에서 제공하는 기본 이벤트 타입이다. 이외에 여러가지 event 타입이 제공된다.
+
 
 #### form의 input 내용을 연결
 
@@ -208,13 +206,12 @@ export default NewTodo
   }
   ```
 
-- `const todoTextInputRef = useRef<HTMLInputElement>(null)`와 같이 ref객체를 선언할때 Generics 타입을 지정한다.
-  
-  - `HTMLInputElement는 react에서 기본 제공하는 type이다.
+- `const todoTextInputRef = useRef<HTMLInputElement>(null)`와 같이 ref객체를 선언할때 Generics 타입을 지정한다. 
+  - `HTMLInputElement`는 react에서 기본 제공하는 type이다.
 
-- ts에서의 연산자 : current? 은 current의 value가 null일수있으니 일단 접근해보고 null이 아니라면 값에 접근하고, current!는 value는 절대 null이 아님을 확신하니 current의 value값에 접근하여 값을 가져오라는 연산자이다.
+- ts에서의 연산자 : `current?` 은 current의 value가 null일수있으니 일단 접근해보고 null이 아니라면 값에 접근하고, `current!`는 value는 절대 null이 아님을 확신하니 current의 value값에 접근하여 값을 가져오라는 연산자이다.
   
-  - 이때 ! 연산자는 해당 값이 null이 아님을 확신할때 사용하도록 한다.
+  - 이때 `!` 연산자는 해당 값이 null이 아님을 확신할때 사용하도록 한다.
 
 #### "Function Props" 로 작업하기
 
@@ -234,14 +231,13 @@ const NewTodo: React.FC<{onAddTodo: (text:string) => void }> = (props) => {
     }
     props.onAddTodo(enteredText)
   }
-
-
   return (
     ...
     )
+}
 ```
 
-- `NewTodo: React.FC<{onAddTodo: (text:string) => void }> = (props) => {`와 같이 NewTodo 함수에서 `onAddTodo`함수를 prop받고, 그에 대한 type을 지정해준다.
+- `NewTodo: React.FC<{onAddTodo: (text:string) => void }> = (props) =>`와 같이 NewTodo 함수에서 `onAddTodo`함수를 prop받고, 그에 대한 type을 지정해준다.
   - 함수의 타입 지정은, 해당 함수의 input 타입, output 타입을 지정해준다.
   - 위에서 `onAddTodo`함수는 string을 입력받아 void를 출력하는 타입의 함수임을 지정한다. 
   - 이를 통해 props에는 `onAddTodo`의 타입에 포함된다.
@@ -288,7 +284,7 @@ function App() {
 
 - Context를 활용하여 store를 구축해보자.
 
-#### Type Alias 정의
+#### Type Alias(타입 별칭) 정의
 
 ```typescript
 type TodosContextObj = {
