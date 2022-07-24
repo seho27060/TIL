@@ -6,7 +6,7 @@
     - [컴포넌트 간에 State 데이터 전달하기](#컴포넌트-간에-state-데이터-전달하기)
   - [useEffect](#useeffect)
     - [useEffect 사용 예시](#useeffect-사용-예시)
-    - [useEffect의 종속성](#useeffect의-종속성)
+    - [useEffect를 통한 데이터로딩](#useeffect를-통한-데이터로딩)
 # udemy React-hook
 ## hook
 - `hook`을 통해 함수형 컴포넌트 내에서 `state`에 접근이 가능하다.
@@ -84,5 +84,6 @@ useEffect( fetch..., [])
 ```
 - `useEffect`를 활용하여 위같이 선언하면, 처음 렌더링될때 실행되고 의존성을 갖는 배열 `[]`에 아무런 변화가 없으므로 결국 컴포넌트의 렌더링이후 1번만 실행된다.
 
-### useEffect의 종속성
-~431
+### useEffect를 통한 데이터로딩
+- 처음 렌더링될시 `useEffect`를 통해 DB에 접근하여 데이터를 요청한다.
+- 의존성 배열의 변화에 따라 `useEffect`속 구문을 실행 가능하므로 조건부적임을 응용하자.
