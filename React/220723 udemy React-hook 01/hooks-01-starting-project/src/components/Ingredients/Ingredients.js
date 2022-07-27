@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useReducer } from "react";
+import React, { useEffect, useCallback, useReducer, useMemo } from "react";
 
 import IngredientForm from "./IngredientForm";
 import IngredientList from "./IngredientList";
@@ -19,24 +19,27 @@ const ingredientReducer = (currentIngredients, action) => {
 };
 
 const httpReducer = (curHttpState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case "SEND":
-      return {loading:true, error:null}
-    case "RESPONSE" :
-      return {...curHttpState,loading:false} // 분해 구조에서, 같은 이름의 인자는 덮어씌여짐
+      return { loading: true, error: null };
+    case "RESPONSE":
+      return { ...curHttpState, loading: false }; // 분해 구조에서, 같은 이름의 인자는 덮어씌여짐
     case "ERROR":
-      return { loading:false, error:action.errorMessage}
+      return { loading: false, error: action.errorMessage };
     case "CLEAR":
-      return {...curHttpState,error:null}
+      return { ...curHttpState, error: null };
     default:
-      throw new Error("Should not be reached")
+      throw new Error("Should not be reached");
   }
-}
+};
 
 const Ingredients = () => {
   const [userIngredients, dispatch] = useReducer(ingredientReducer, []);
   // const [userIngredients, setUserIngredients] = useState([]);
-  const [httpState, dispatchHttp] = useReducer(httpReducer, {loading: false, error:false})
+  const [httpState, dispatchHttp] = useReducer(httpReducer, {
+    loading: false,
+    error: false,
+  });
   // const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState("");
 
@@ -67,9 +70,9 @@ const Ingredients = () => {
     dispatch({ type: "SET", ingredients: filteredIngredients });
   }, []);
 
-  const addIngredientHandler = (ingredient) => {
+  const addIngredientHandler = useCallback((ingredient) => {
     // setIsLoading(true);
-    dispatchHttp({type:"SEND"})
+    dispatchHttp({ type: "SEND" });
     fetch(
       "https://react-hooks-update-d7cdc-default-rtdb.firebaseio.com/ingredients.json",
       {
@@ -80,7 +83,7 @@ const Ingredients = () => {
     )
       .then((response) => {
         // setIsLoading(false);
-        dispatchHttp({type:"RESPONSE"})
+        dispatchHttp({ type: "RESPONSE" });
         return response.json();
       })
       .then((responseData) => {
@@ -92,14 +95,15 @@ const Ingredients = () => {
           type: "ADD",
           ingredient: { id: responseData.name, ...ingredient },
         });
-      }).catch((error) => {
-        dispatchHttp({type:"ERROR", errorMessage:error.message})
+      })
+      .catch((error) => {
+        dispatchHttp({ type: "ERROR", errorMessage: error.message });
       });
-  };
+  }, []);
 
-  const removeIngredientHandler = (ingredientId) => {
+  const removeIngredientHandler = useCallback((ingredientId) => {
     // setIsLoading(false);
-    dispatchHttp({type : "SEND"})
+    dispatchHttp({ type: "SEND" });
     fetch(
       `https://react-hooks-update-d7cdc-default-rtdb.firebaseio.com/ingredients/${ingredientId}.json`,
       {
@@ -111,22 +115,33 @@ const Ingredients = () => {
         //   prevIngredients.filter((ingredient) => ingredient.id !== ingredientId)
         // );
         dispatch({ type: "DELETE", id: ingredientId });
-        dispatchHttp({type:"RESPONSE"})
+        dispatchHttp({ type: "RESPONSE" });
       })
       .catch((error) => {
         // setError("SOMETHING WENT WRONG " + error.message);
         // setIsLoading(false);
-        dispatchHttp({type:"ERROR", errorMessage:error.message })
+        dispatchHttp({ type: "ERROR", errorMessage: error.message });
       });
-  };
+  }, []);
 
-  const clearError = () => {
+  const clearError = useCallback(() => {
     // setError(null);
-    dispatchHttp({type:"CLEAR"})
-  };
+    dispatchHttp({ type: "CLEAR" });
+  }, [])
+
+  const ingredientList = useMemo(() => {
+    return (
+      <IngredientList
+        ingredients={userIngredients}
+        onRemoveItem={removeIngredientHandler}
+      />
+    );
+  }, [userIngredients, removeIngredientHandler]);
   return (
     <div className="App">
-      {httpState.error && <ErrorModal onClose={clearError}>{httpState.error}</ErrorModal>}
+      {httpState.error && (
+        <ErrorModal onClose={clearError}>{httpState.error}</ErrorModal>
+      )}
       <IngredientForm
         onAddIngredient={addIngredientHandler}
         loading={httpState.loading}
@@ -134,10 +149,7 @@ const Ingredients = () => {
 
       <section>
         <Search onLoadIngredients={filteredIngredientsHandler} />
-        <IngredientList
-          ingredients={userIngredients}
-          onRemoveItem={removeIngredientHandler}
-        />
+        {ingredientList}
       </section>
     </div>
   );
