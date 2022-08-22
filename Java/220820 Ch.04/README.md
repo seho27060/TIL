@@ -56,8 +56,6 @@ switch (조건){
 
 - 조건식의 결과와 case의 값은 정수 상수. 문자열만 가능하다.
 
-
-
 ### 여러 반복문
 
 #### for 문
@@ -108,23 +106,21 @@ do {
 ```java
 class Ex4_19
 {
-	public static void main(String[] args)
-	{
+    public static void main(String[] args)
+    {
       // for문에 Loop1이라는 이름을 붙였다..
-		Loop1 : for(int i=2;i <=9;i++) {	
-				for(int j=1;j <=9;j++) {
-					if(j==5)
-						break Loop1;
-//						break;
-//						continue Loop1;
-//						continue;
-					System.out.println(i+"*"+ j +"="+ i*j);
-				} // end of for i
-				System.out.println();
-		} // end of Loop1
+        Loop1 : for(int i=2;i <=9;i++) {    
+                for(int j=1;j <=9;j++) {
+                    if(j==5)
+                        break Loop1;
+//                        break;
+//                        continue Loop1;
+//                        continue;
+                    System.out.println(i+"*"+ j +"="+ i*j);
+                } // end of for i
+                System.out.println();
+        } // end of Loop1
 
-	}
+    }
 }
 ```
-
-

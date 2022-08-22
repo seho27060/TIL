@@ -401,32 +401,28 @@ class Ex6_7 {
 
 ```java
 class Data_1 {
-	int value;
+    int value;
 }
 
 class Data_2 {
-	int value;
+    int value;
 
-	Data_2(int x) {   // 매개변수가 있는 생성자.
-		value = x;
-	}
+    Data_2(int x) {   // 매개변수가 있는 생성자.
+        value = x;
+    }
 }
 
 class Ex6_11 {
-	public static void main(String[] args) {
-		Data_1 d1 = new Data_1();
-		Data_2 d2 = new Data_2(); // compile error발생
-	}
+    public static void main(String[] args) {
+        Data_1 d1 = new Data_1();
+        Data_2 d2 = new Data_2(); // compile error발생
+    }
 }
 ```
 
 - `Data_2 d2 = new Data_2();`에서 생성자가 선언되었지만, 매개변수가 없을때의 생성자는 선언되지 않아 에러가 발생한다.
 
 - 매개변수가 있는 생성자를 선언하였으므로, 인스턴스 생성시 매개변수를 담아 생성하면 에러가 발생하지 않는다.
-
-
-
-
 
 #### 생성자에서 다른 생성자 호출하기 - this()
 
@@ -437,37 +433,36 @@ class Ex6_11 {
   2. 한 생성자에서 다른 생성자를 호출할 때는 반드시 첫 줄에서만 호출이 가능하다.
 
 ```java
-
 class Car2 {
-	String color;		
-	String gearType;	
-	int door;			
+    String color;        
+    String gearType;    
+    int door;            
 
-	Car2() {
+    Car2() {
         // color = 'white';
         // gearType = "auto";
         // door = 4; 를 아래와 같이 간결하게 표현 가능하다.
-		this("white", "auto", 4);
-	}
+        this("white", "auto", 4);
+    }
 
-	Car2(String color) {
-		this(color, "auto", 4);
-	}
+    Car2(String color) {
+        this(color, "auto", 4);
+    }
 
-	Car2(String color, String gearType, int door) {
-		this.color = color;
-		this.gearType = gearType;
-		this.door = door;
-	}
+    Car2(String color, String gearType, int door) {
+        this.color = color;
+        this.gearType = gearType;
+        this.door = door;
+    }
 }
 class Ex6_13 {
-	public static void main(String[] args) {
-		Car2 c1 = new Car2();	
-		Car2 c2 = new Car2("blue");
+    public static void main(String[] args) {
+        Car2 c1 = new Car2();    
+        Car2 c2 = new Car2("blue");
 
-		System.out.println("c1�� color=" + c1.color + ", gearType=" + c1.gearType+ ", door="+c1.door);
-		System.out.println("c2�� color=" + c2.color + ", gearType=" + c2.gearType+ ", door="+c2.door);
-	}
+        System.out.println("c1�� color=" + c1.color + ", gearType=" + c1.gearType+ ", door="+c1.door);
+        System.out.println("c2�� color=" + c2.color + ", gearType=" + c2.gearType+ ", door="+c2.door);
+    }
 }
 ```
 
