@@ -10,7 +10,7 @@
 
 - springboot initializer : 설정에 맞는 압축파일을 줌  
 
-![](C:\Users\161548\AppData\Roaming\marktext\images\2022-08-22-16-39-46-image.png)
+![2022-08-22-16-39-46-image.png](C:\Users\161548\Desktop\전남대\싸피\TIL\springboot\220822%20springboot%2000\images\2022-08-22-16-39-46-image.png)
 
 - project 
   
@@ -18,11 +18,11 @@
   
   - gradle : 거의 대부분 요즘 이거씀 
 
-![](C:\Users\161548\AppData\Roaming\marktext\images\2022-08-22-16-39-31-image.png)
+![2022-08-22-16-39-31-image.png](C:\Users\161548\Desktop\전남대\싸피\TIL\springboot\220822%20springboot%2000\images\2022-08-22-16-39-31-image.png)
 
-![](C:\Users\161548\AppData\Roaming\marktext\images\2022-08-22-16-43-36-image.png)
+![2022-08-22-16-43-36-image.png](C:\Users\161548\Desktop\전남대\싸피\TIL\springboot\220822%20springboot%2000\images\2022-08-22-16-43-36-image.png)
 
-- 위 종속성을 기본으로 갖는 스프링압축파일 생성
+위 종속성을 기본으로 갖는 스프링압축파일 생성
 
 #### 작업 파일
 
@@ -38,17 +38,15 @@
 
 - service - 실제 api에 대한 역할을 맡아줌
 
-![](C:\Users\161548\AppData\Roaming\marktext\images\2022-08-22-19-36-55-image.png)
+![2022-08-22-19-36-55-image.png](C:\Users\161548\Desktop\전남대\싸피\TIL\springboot\220822%20springboot%2000\images\2022-08-22-19-36-55-image.png)
 
-- controller : 요청이 어디로 왔고, 무엇을 원하는지, 원하는걸 반환해주면 됨
+controller : 요청이 어디로 왔고, 무엇을 원하는지, 원하는걸 반환해주면 됨
 
 - service : controller에서 service를 호출, controller의 어떻게를 수행(요청 동작 수행)
 
 - repository : 가장 단순한 도구 모음. db에 접근하는 쿼리 모음/service가 데이터를 가지고 복잡한 일을 할때, 해당 데이터에 관련된 crud를 담당함.
 
 - 추상화를 통한 유지보수, 개발의 용이성 증대
-
-
 
 #### Controller
 

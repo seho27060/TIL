@@ -117,6 +117,8 @@ int[][] arr = {{1,2,3}, {4,5,6}};
 
 - `sort(Array arr)`을 사용한다.
 
+
+
 # Java_06
 
 ## 객체지향 프로그래밍 I
@@ -317,11 +319,11 @@ class Ex6_7 {
         System.out.println("main() : x = "+d.x);
         }
 
-        static void change(int x) {  // 기본형 매개변
+        static void change(int x) {  // 기본형 매개변수
             x = 1000;
             System.out.println("change() : x = " + x);
         }    
-        static void change2(Data d) { // 참조형 매개변
+        static void change2(Data d) { // 참조형 매개변수
             d.x = 1000;
             System.out.println("change2() : x = " + d.x);
         }
@@ -329,6 +331,9 @@ class Ex6_7 {
 ```
 
 - 메서드를 통해 인스턴스의 값(참조형 매개변수)를 변경할 수도 있다.
+- 값만을 넘겨주는 기본형 매개변수(read only)/ 값의 주소를 넘겨주는 참조형 매개변수(read & write)
+
+
 
 #### 참조형 반환 타입
 
