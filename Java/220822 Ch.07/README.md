@@ -125,7 +125,7 @@ import static java.lang.Math.random; // Math.random()만, 괄호 안붙임.
 import static java.lang.System.out; // System.out을 out만으로 참조가능
 ```
 
-#### 제어자(modifier)
+### 제어자(modifier)
 
 - 제어자는 클래스, 변수 또는 메서드의 선언부에 함께 사용되어 부가적인 의미를 부여한다.
 
@@ -280,7 +280,7 @@ class AudioPlayer extends Player{
 
 - 상위 클래스로 갈수록 추상화가 되고, 하위 클래스로 갈수록 구체화된다.
 
-#### 인터페이스(interface)
+### 인터페이스(interface)
 
 - 추상 메서드와 상수만을 멤버로 가지는 일종의 추상 클래스
 
@@ -352,7 +352,7 @@ interface MyInterface {
 }
 ```
 
-#### 내부 클래스(inner class)
+### 내부 클래스(inner class)
 
 - 클래스 내에 선언된 클래스.
 
