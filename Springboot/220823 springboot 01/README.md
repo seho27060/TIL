@@ -1,6 +1,10 @@
 # springboot_01
 
-## Controller - Service
+## Springboot MVC
+
+- 유지보수와 기능 구현을 위해 각 역할에 맞는 Layer로 구분한다.
+
+- 왜 한개의 
 
 ### Controller
 
@@ -85,54 +89,6 @@ public interface SomeService {
 
 - Interface를 구현하기 위해 `SomeServiceImpl` 생성
 
-#### Domain
-
-- `Entity`클래스를 생성한다.
-
-```java
-@Entity
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder // build 패턴.
-public class Challenge {
-
-    @Id // primary key
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // 생성 값에 대한 strategy 할당, 데이터가 생성될 수록 index 증가
-    private Long id;
-
-    private String name;
-
-    private int level;
-
-    private String content;
-
-}
-```
-
-- 사용하려는 `Entity`를 정의하고, @Builder를 통해 build패턴을 부여한다.
-
-- #### Domain-DTO
-
-```java
-// src/main/java/com/ssafy/project/Domain/DTO/CRDTO
-
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-public class CRDTO {
-    private String name;
-    private int level;
-    private String content;
-}
-```
-
-- 전달할 `Challenge`객체의 정보를 DTO로 선언한다.
-- Lombok 어노테이션
-  - Getter : 클래스에 접근 할수 있는 `getter`메서드 제공
-  - AllArgsConstructor : 모든 인자의 생성자를 생성
-  - NoArgsConstructor : 기본 빈 생성자 생성
-
 #### ServiceImpl
 
 - Interface인 Service의 구현
@@ -164,7 +120,56 @@ public class SomeServiceImpl implements SomeService{
 - @Override를 통해 Interface에서 선언된 `saveChallenge`메서드의 실행을 구현한다.
 - "build" 패턴을 통해 데이터가 저장된다.
 
-#### Repository
+### Domain
+
+- 실제 DB테이블과 매핑되는 `Entity`클래스를 생성한다.
+
+```java
+@Entity
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder // build 패턴.
+public class Challenge {
+
+    @Id // primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 생성 값에 대한 strategy 할당, 데이터가 생성될 수록 index 증가
+    private Long id;
+
+    private String name;
+
+    private int level;
+
+    private String content;
+
+}
+```
+
+- 사용하려는 `Entity`를 정의하고, `@Builder`를 통해 build패턴을 부여한다. 이를 통해 객체 생성 시점에 값을 할당할 수 있다.
+- `@Setter`를 여러 Domain에서 사용하면 일관성을 보장하게 못하게 되므로, `@Builder`어노테이션을 애용하도록 하자. 
+
+##### Domain-DTO
+
+```java
+// src/main/java/com/ssafy/project/Domain/DTO/CRDTO
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class CRDTO {
+    private String name;
+    private int level;
+    private String content;
+}
+```
+
+- 전달할 `Challenge`객체의 정보를 DTO로 선언한다.
+- Lombok 어노테이션
+  - Getter : 클래스에 접근 할수 있는 `getter`메서드 제공
+  - AllArgsConstructor : 모든 인자의 생성자를 생성
+  - NoArgsConstructor : 기본 빈 생성자 생성
+
+### Repository
 
 ```java
 public interface ChallengeRepository extends JpaRepository<Challenge, Long> {
@@ -179,5 +184,7 @@ public interface ChallengeRepository extends JpaRepository<Challenge, Long> {
 - `JpaRepository`를 상속받는 레포지터리 Interface를 생성하면 spring에서 자동으로 생성해준다.
 
 - 또한 정해진 키워드(`findById`와 같은)를 통해 매개변수와 반환타입에 적합한 기능을 수행할 수 있다.
+
+- DB에 접근하여 데이터에 대한 CRUD를 실행 가능한 Layer이다. 필요한 기능을 쿼리 메서드 규칙에 따라 작성하거나, 커스터마이징한 쿼리 메서드를 등록할수도 있다.
 
 # 
