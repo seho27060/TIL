@@ -10,7 +10,7 @@
 
 - springboot initializer : 설정에 맞는 압축파일을 줌  
 
-![2022-08-22-16-39-46-image.png](C:\Users\161548\Desktop\전남대\싸피\TIL\springboot\220822%20springboot%2000\images\2022-08-22-16-39-46-image.png)
+![2022-08-22-16-39-46-image.png](https://github.com/seho27060/TIL/blob/8ad96db3ef58f58e9382d60aa248cdcaa0cebde2/Springboot/220822%20springboot%2000/images/2022-08-22-16-39-31-image.png)
 
 - project 
   
@@ -18,9 +18,9 @@
   
   - gradle : 거의 대부분 요즘 이거씀 
 
-![2022-08-22-16-39-31-image.png](C:\Users\161548\Desktop\전남대\싸피\TIL\springboot\220822%20springboot%2000\images\2022-08-22-16-39-31-image.png)
+![2022-08-22-16-39-31-image.png](https://github.com/seho27060/TIL/blob/8ad96db3ef58f58e9382d60aa248cdcaa0cebde2/Springboot/220822%20springboot%2000/images/2022-08-22-16-39-46-image.png)
 
-![2022-08-22-16-43-36-image.png](C:\Users\161548\Desktop\전남대\싸피\TIL\springboot\220822%20springboot%2000\images\2022-08-22-16-43-36-image.png)
+![2022-08-22-16-43-36-image.png](https://github.com/seho27060/TIL/blob/8ad96db3ef58f58e9382d60aa248cdcaa0cebde2/Springboot/220822%20springboot%2000/images/2022-08-22-16-43-36-image.png)
 
 위 종속성을 기본으로 갖는 스프링압축파일 생성
 
@@ -38,7 +38,7 @@
 
 - service - 실제 api에 대한 역할을 맡아줌
 
-![2022-08-22-19-36-55-image.png](C:\Users\161548\Desktop\전남대\싸피\TIL\springboot\220822%20springboot%2000\images\2022-08-22-19-36-55-image.png)
+![2022-08-22-19-36-55-image.png](https://github.com/seho27060/TIL/blob/8ad96db3ef58f58e9382d60aa248cdcaa0cebde2/Springboot/220822%20springboot%2000/images/2022-08-22-19-36-55-image.png)
 
 controller : 요청이 어디로 왔고, 무엇을 원하는지, 원하는걸 반환해주면 됨
 
