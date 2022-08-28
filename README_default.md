@@ -1,6 +1,9 @@
-[toc]
-# Subject_00
-## Subject Detail
-### index1
-#### detail-index1
+[TOC]
 
+# Subject_00
+
+## Subject Detail
+
+### index1
+
+#### detail-index1
