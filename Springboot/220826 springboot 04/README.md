@@ -170,7 +170,20 @@ public class OrderServiceImpl implements OrderService {
 
 - Logger가 없다면 디버깅시에 `println`을 통해 콘솔에 출력하여 확인해야 하나, 애플리케이션의 사이즈가 커지면 이는 상당히 곤란하게 된다.
 
-- `private final Logger logger = LoggerFactory.getLogger(SomeServiceImpl.class);` 를 통해 Controller내에 logger 생성
+- `slf4j`에서 `Logger`를 사용하도록 한다.
+
+- `private final Logger logger = LoggerFactory.getLogger(SomeServiceImpl.class);` 를 통해 **Controller**내에 logger 생성
+
+- 로그정보를 확인할려는 `Contoller`에 매핑된 함수 내에서 아래와 같이 사용한다.
+
+```java
+@GetMapping("/read")
+public void exampleMethod{
+    ...
+    logger.로그레벨("로그메세지");
+    ...
+}
+```
 
 #### 5단계의 로그 레벨(1:상위 - 5:하위)
 

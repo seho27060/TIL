@@ -48,25 +48,24 @@
           this.name = member.getName();
       }
   }
-  
-  
   ```
 
+```
 - 위 예시에서는 일대다 관계인 `Member`와 `Challenge`에서 `Member`엔티티가 삭제되면 연관관계에 있는 `Challenge`도 삭제된다.
 
 - 다양한 operation 들
-  
-  - `CascadeType.ALL` : 모든 Cascade를 적용한다
-  
-  - `CascadeType.PERSIST`: 엔티티를 영속화할 때, 연관된 엔티티도 함께 유지한다
-  
-  - `CascadeType.MERGE`: 엔티티 상태를 병합(Merge)할 때, 연관된 엔티티도 모두 병합
-  
-  - `CascadeType.REMOVE`:엔티티를 제거할 때, 연관된 엔티티도 모두 제거한다.
-  
-  - `CascadeType.DETACH`: 부모 엔티티를 detach() 수행하면, 연관 엔티티도 detach된다.
-  
-  - `CascadeType.REFRESH`: 상위 엔티티를 새로고침할때, 연관된 엔티티도 모두 새로고침한다.
+
+- `CascadeType.ALL` : 모든 Cascade를 적용한다
+
+- `CascadeType.PERSIST`: 엔티티를 영속화할 때, 연관된 엔티티도 함께 유지한다
+
+- `CascadeType.MERGE`: 엔티티 상태를 병합(Merge)할 때, 연관된 엔티티도 모두 병합
+
+- `CascadeType.REMOVE`:엔티티를 제거할 때, 연관된 엔티티도 모두 제거한다.
+
+- `CascadeType.DETACH`: 부모 엔티티를 detach() 수행하면, 연관 엔티티도 detach된다.
+
+- `CascadeType.REFRESH`: 상위 엔티티를 새로고침할때, 연관된 엔티티도 모두 새로고침한다.
 
 ### 쿼리 메서드
 
