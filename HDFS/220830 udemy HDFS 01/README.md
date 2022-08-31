@@ -14,12 +14,20 @@
 
 #### Client Node
 
-- 
-
-#### Name Node
+- #### Name Node
 
 - 
 
 #### Data Node
 
-#### detail-index1
+### Using HDFS
+
+- UI(Ambari)
+
+- Command-Line interface
+
+-  HTTP/ HDFS Proxies
+
+- Java interface
+
+- NFS Gateway
