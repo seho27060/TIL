@@ -70,4 +70,32 @@
 
 - action이 호출되기 전엔 드라이버 프로그램안에서는 아무일도 일어나지 않는다.
 
-#### detail-index1
+## Hive
+
+- SQL을 mapping, reducing을 하도록 변환하여 HDFS에 적용한다.
+
+### Schema On Read
+
+- 구조화 되지 않는 데이터를 가져와 읽는 순간에 스키마를 적용한다.
+
+- 메타스토어(metastore)와 같은 스키마데이터(메타데이터)를 가지고 있어 스키마 적용에 사용된다.
+
+### Partitioning
+
+- 데이터를 분리(partitioned)된 하위 디렉토리에 저장한다.
+
+### MySQL과 Hadoop 통합하기
+
+#### Sqoop
+
+- SQL + Hadoop
+
+-  대용량 데이터 세트를 가져오거나 내보내고 관리
+
+- 가져오거나 내보내는 mapper만 사용
+
+- 대용량 데이터 세트를 위한 기술이니 작은 데이터는 효율이 떨어짐
+
+##### Incremental import, 증분적 불러오기
+
+- 
