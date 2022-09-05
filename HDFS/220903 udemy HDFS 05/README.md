@@ -10,7 +10,27 @@
 
 ### Kafka
 
-#### Kafka architecture
+#### What is streaming?
+
+- 데이터가 생성되는 즉시 클러터에 가져올 수 있다.
+
+- Kafka를 활용하여 HBase, HDFS 등에 저장
+
+- 실시간 주식 거래, 고객 행동 데이터 etc..
+
+#### Two Problems
+
+1. 어떻게 데이터 소스를 클러터스로 가져 올 것인가.
+
+2. 데이터를 가져와서 무엇을 할건가.
+
+#### Kafka 활용
+
+1. Kafka 서버의 클러스터를 구성, 데이터 생성시 서버에 저장
+
+2. 저장됨과 동시에 필요헌 대상에게 발행
+
+##### Kafka architecture
 
 - Producers
 
