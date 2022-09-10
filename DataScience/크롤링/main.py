@@ -1,23 +1,31 @@
-# 네이버 검색 API예제는 블로그를 비롯 전문자료까지 호출방법이 동일하므로 blog검색만 대표로 예제를 올렸습니다.
-# 네이버 검색 Open API 예제 - 블로그
+import json
 
-# 비로그인 api -> 하루 1000건 요청가능
+import naverMapCrawler
+import pandas as pd
 
-import os
-import sys
-import urllib.request
-client_id = "PnGoJDVEfbKBxWTZxz3H"
-client_secret = "FCdMYW54NT"
-encText = urllib.parse.quote("비지트 서초구")
-url = "https://openapi.naver.com/v1/search/blog?query=" + encText # json 결과
-# url = "https://openapi.naver.com/v1/search/blog.xml?query=" + encText # xml 결과
-request = urllib.request.Request(url)
-request.add_header("X-Naver-Client-Id",client_id)
-request.add_header("X-Naver-Client-Secret",client_secret)
-response = urllib.request.urlopen(request)
-rescode = response.getcode()
-if(rescode==200):
-    response_body = response.read()
-    print(response_body.decode('utf-8'))
-else:
-    print("Error Code:" + rescode)
+rawData = pd.read_csv("text.csv")
+
+reviewData = []
+try:
+    reviewData = pd.read_csv("result.json")
+except:
+    print("결과 데이터 없음. 새로 생성")
+rawDataList = rawData.drop("Unnamed: 0", axis = 1)
+print(rawDataList.columns)
+
+for idx in range(2):
+    searchWord = ""
+    rawData = rawDataList.loc[idx,["상호명","도로명주소"]]
+    for word in rawData:
+        searchWord += word + " "
+    searchWord = searchWord.rstrip()
+    print(searchWord)
+    result = naverMapCrawler.crawler(searchWord)
+    if result:
+        reviewData.append(result)
+
+print(reviewData)
+
+# # json 파일로 저장
+with open('result.json', 'w', encoding='utf-8') as f:
+    json.dump(reviewData, f, indent=4, ensure_ascii=False)

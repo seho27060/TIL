@@ -10,7 +10,7 @@ print(csv_test[csv_test["상권업종대분류명"] == "음식"].shape)
 # # print()
 # names = csv_test[csv_test["상권업종대분류명"] == "음식"]
 # names.to_csv("text.csv")
-# # print(names)
+# print(names)
 # f = open('textUrls.txt', "w")
 
 # for name in names[:10]:
