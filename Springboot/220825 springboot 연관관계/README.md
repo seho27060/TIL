@@ -60,7 +60,6 @@
   }
   ```
 
-```
 - 위 예시에서는 일대다 관계인 `Member`와 `Challenge`에서 `Member`엔티티가 삭제되면 연관관계에 있는 `Challenge`도 삭제된다.
 
 - 다양한 operation 들
