@@ -1,3 +1,13 @@
+- [Springboot_06](#springboot_06)
+  - [JPA, Hibernate, Spring Data JPA](#jpa-hibernate-spring-data-jpa)
+      - [Spring Data JPA](#spring-data-jpa)
+    - [데이터베이스 초기화](#데이터베이스-초기화)
+  - [Controller에서 데이터를 받는법.](#controller에서-데이터를-받는법)
+      - [@RequestMapping](#requestmapping)
+      - [@RequestParam, @PathVariable](#requestparam-pathvariable)
+        - [@RequestParam](#requestparam)
+        - [@PathVariable](#pathvariable)
+      - [@RequestBody](#requestbody)
 # Springboot_06
 
 ## JPA, Hibernate, Spring Data JPA

@@ -1,3 +1,13 @@
+- [Springboot_02](#springboot_02)
+  - [JPA(Java Persistence API)](#jpajava-persistence-api)
+    - [jpa](#jpa)
+    - [영속성 컨텍스트](#영속성-컨텍스트)
+      - [영속성 컨텍스트의 특징](#영속성-컨텍스트의-특징)
+  - [연관관계](#연관관계)
+    - [JPA에서의 연관관계](#jpa에서의-연관관계)
+      - [연관관계의 주인](#연관관계의-주인)
+      - [지연로딩 전략](#지연로딩-전략)
+      - [순환참조](#순환참조)
 # Springboot_02
 
 ## JPA(Java Persistence API)

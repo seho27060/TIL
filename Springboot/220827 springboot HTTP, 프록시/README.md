@@ -1,3 +1,17 @@
+- [Springboot_05](#springboot_05)
+    - [Https Method](#https-method)
+      - [멱등성(Idempotent)](#멱등성idempotent)
+    - [HTTP Method의 멱등성](#http-method의-멱등성)
+      - [멱등성이 적용되는 Method](#멱등성이-적용되는-method)
+        - [GET](#get)
+        - [PUT](#put)
+        - [DELETE](#delete)
+      - [멱등성이 적용되지 않는 Method](#멱등성이-적용되지-않는-method)
+        - [POST](#post)
+        - [PATCH](#patch)
+    - [프록시 객체](#프록시-객체)
+      - [즉시 로딩과 지연 로딩](#즉시-로딩과-지연-로딩)
+    - [에러와 예외](#에러와-예외)
 # Springboot_05
 
 ### Https Method

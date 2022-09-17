@@ -1,5 +1,8 @@
-[TOC]
-
+- [udemy HDFS_07](#udemy-hdfs_07)
+  - [Spark Streaming](#spark-streaming)
+      - [DStreams(Discretized Streams)](#dstreamsdiscretized-streams)
+      - [detail-index1](#detail-index1)
+  - [Storm](#storm)
 # udemy HDFS_07
 
 - 실시간 데이터를 스트리밍하고, 데이터 수신 즉시 분석하여 결과 출력하기.

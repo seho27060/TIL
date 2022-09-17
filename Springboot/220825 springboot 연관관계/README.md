@@ -1,3 +1,13 @@
+- [Springboot_03](#springboot_03)
+  - [연관관계](#연관관계)
+    - [JPA 영속성 전이(CASCADE)](#jpa-영속성-전이cascade)
+      - [Entity의 상태](#entity의-상태)
+      - [CascadeType](#cascadetype)
+    - [Wrapper class](#wrapper-class)
+    - [Generic](#generic)
+    - [NullPointerException(NPE)](#nullpointerexceptionnpe)
+      - [Optional](#optional)
+    - [더티체킹(Dirty Checking)](#더티체킹dirty-checking)
 # Springboot_03
 
 ## 연관관계

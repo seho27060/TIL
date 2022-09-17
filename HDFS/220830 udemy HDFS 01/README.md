@@ -1,4 +1,12 @@
-[TOC]
+- [udemy HDFS_01](#udemy-hdfs_01)
+  - [HDFS(Hadoop distrubuted File System)](#hdfshadoop-distrubuted-file-system)
+    - [HDFS Architecture](#hdfs-architecture)
+      - [Client Node](#client-node)
+      - [Name Node](#name-node)
+      - [Data Node](#data-node)
+        - [Reading a File](#reading-a-file)
+        - [Writing a File](#writing-a-file)
+    - [Using HDFS](#using-hdfs)
 
 # udemy HDFS_01
 

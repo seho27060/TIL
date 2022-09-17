@@ -1,4 +1,12 @@
-[TOC]
+- [HDFS 02](#hdfs-02)
+  - [MapReduce](#mapreduce)
+    - [Mapping](#mapping)
+      - [Shuffle and Sort](#shuffle-and-sort)
+    - [Reduce](#reduce)
+    - [MapReduce의 분산처리](#mapreduce의-분산처리)
+    - [작업 흐름](#작업-흐름)
+      - [작업은 데이터에 최대한 가깝게 이뤄진다.](#작업은-데이터에-최대한-가깝게-이뤄진다)
+    - [Handling Failure](#handling-failure)
 
 # HDFS 02
 

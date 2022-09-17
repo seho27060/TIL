@@ -1,4 +1,7 @@
-[toc]
+- [Learning React](#learning-react)
+  - [Ch.6 리액트 상태 관리](#ch6-리액트-상태-관리)
+    - [1. 별점 컴포넌트 만들기](#1-별점-컴포넌트-만들기)
+      - [detail-index1](#detail-index1)
 # Learning React
 ## Ch.6 리액트 상태 관리
 

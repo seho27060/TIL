@@ -1,4 +1,7 @@
-[toc]
+- [TypeScript](#typescript)
+  - [TypeScript](#typescript-1)
+    - [TypeScript와 JavaScript의 차이점](#typescript와-javascript의-차이점)
+    - [설치 및 실행](#설치-및-실행)
 # TypeScript
 ## TypeScript
 

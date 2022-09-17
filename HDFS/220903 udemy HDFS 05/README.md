@@ -1,4 +1,22 @@
-[TOC]
+- [udemy HDFS_05](#udemy-hdfs_05)
+  - [HBase](#hbase)
+    - [index1](#index1)
+      - [detail-index1](#detail-index1)
+    - [Kafka](#kafka)
+      - [What is streaming?](#what-is-streaming)
+      - [Two Problems](#two-problems)
+      - [Kafka 활용](#kafka-활용)
+        - [Kafka architecture](#kafka-architecture)
+    - [YARN](#yarn)
+    - [TEZ](#tez)
+    - [MESOS](#mesos)
+    - [ZOOKEEPER](#zookeeper)
+      - [해결가능한 Failuer modes](#해결가능한-failuer-modes)
+      - [분산시스템 내의 원시적(Primitive) 실행](#분산시스템-내의-원시적primitive-실행)
+      - [ZooKeeper quorums](#zookeeper-quorums)
+    - [Oozie](#oozie)
+        - [워크플로우 조직하기](#워크플로우-조직하기)
+    - [Zeppelin](#zeppelin)
 
 # udemy HDFS_05
 

@@ -1,3 +1,4 @@
+- [IntelliJ Shortcut](#intellij-shortcut)
 # IntelliJ Shortcut
 
 **General : 일반적인 단축키**  

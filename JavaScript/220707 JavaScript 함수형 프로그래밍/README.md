@@ -1,4 +1,16 @@
-[toc]
+- [러닝 리액트(Learning React)](#러닝-리액트learning-react)
+  - [Chapter 3. 자바스크립트를 활용한 함수형 프로그래밍](#chapter-3-자바스크립트를-활용한-함수형-프로그래밍)
+    - [1. 함수형이란?](#1-함수형이란)
+    - [2. 명령형 프로그래밍과 선언적 프로그래밍 비교](#2-명령형-프로그래밍과-선언적-프로그래밍-비교)
+      - [명령형 프로그래밍(imperative programming)](#명령형-프로그래밍imperative-programming)
+      - [선언적 프로그래밍(declarative programming)](#선언적-프로그래밍declarative-programming)
+    - [3. 함수형 프로그래밍의 개념](#3-함수형-프로그래밍의-개념)
+      - [1. 불변성(immutable)](#1-불변성immutable)
+      - [2. 순수 함수(Fure Function)](#2-순수-함수fure-function)
+      - [3. 데이터 변환](#3-데이터-변환)
+      - [4. 고차 함수](#4-고차-함수)
+      - [5. 재귀](#5-재귀)
+      - [6. 합성](#6-합성)
 # 러닝 리액트(Learning React)
 
 ## Chapter 3. 자바스크립트를 활용한 함수형 프로그래밍
