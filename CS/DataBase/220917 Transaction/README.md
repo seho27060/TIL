@@ -98,7 +98,7 @@
 
 ###### READ COMMITED
 
-- 상대방이 커밋한 데이터만 조회할 수 있다, 따라서 Dirty Read는 발생하지 않는다, 하지만 NON-REPEATABLE READ가 발생할 수 있다. 사용자 A가 커밋한 데이터 C를 사용자 B가 트랜잭션 내에서 조회하고 있을때, 이후에 사용자 A가 데이터 C를 수정 후 다시 커밋한다면 사용자 B는 같은 트랜잭션 내에서 다른 상태의 데이터 C를 조회하게 된다.
+- 상대방이 커밋한 데이터만 조회할 수 있다, 따라서 [Dirty Read](https://github.com/seho27060/TIL/tree/master/Springboot/220825%20springboot%20%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84)는 발생하지 않는다, 하지만 NON-REPEATABLE READ가 발생할 수 있다. 사용자 A가 커밋한 데이터 C를 사용자 B가 트랜잭션 내에서 조회하고 있을때, 이후에 사용자 A가 데이터 C를 수정 후 다시 커밋한다면 사용자 B는 같은 트랜잭션 내에서 다른 상태의 데이터 C를 조회하게 된다.
 
 ###### REPEATABLE READ
 
