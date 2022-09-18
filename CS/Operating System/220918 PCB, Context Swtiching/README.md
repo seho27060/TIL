@@ -6,7 +6,6 @@
     - [Context](#context)
     - [OverHead](#overhead)
     - [인터럽트(Interrupt)](#인터럽트interrupt)
-          - [레퍼런스](#레퍼런스)
 
 # PCB/ Context Switching
 
@@ -94,7 +93,7 @@
   
   - etc...
 
-###### 레퍼런스
+- 레퍼런스
 
 > [PCB &amp; Context Switching | 👨🏻‍💻 Tech Interview](https://gyoogle.dev/blog/computer-science/operating-system/PCB%20&%20Context%20Switching.html)
 > 

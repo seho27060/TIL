@@ -13,7 +13,6 @@
           - [REPEATABLE READ](#repeatable-read)
           - [SERIALBLE](#serialble)
       - [지속성(Durability)](#지속성durability)
-          - [레퍼런스](#레퍼런스)
 # Transaction
 
 ## 트랜잭션
@@ -118,7 +117,10 @@
 
 - 성공적으로 수행된 트랜잭션은 영원히 기록된다. 중간에 시스템 문제가 발생했을때, 데이터베이스 로그를 참고해서 성공했던 트랜잭션을 복구 할 수 있다.
 
-###### 레퍼런스
+---
+
+- 레퍼런스
+
 
 > [트랜잭션 - 해시넷](http://wiki.hash.kr/index.php/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98)[트랜잭션 - 해시넷](http://wiki.hash.kr/index.php/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98)
 > 

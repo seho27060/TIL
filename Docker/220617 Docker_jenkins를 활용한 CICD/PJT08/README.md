@@ -1,5 +1,5 @@
+
 # PJT08
-[toc]
 
 ## CI/CD
 - Continuous Intergration(지속적 통합), Continuous Delivery(지속적인 서비스제공), 또는 Continuous Deployment(지속적인 배포)의 약자로, 애플리케이션 개발 단계를 자동화하여, 애플리케이션 개발 주기를 축햑하는 방법.

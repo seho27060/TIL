@@ -5,8 +5,6 @@
       - [Fetcher](#fetcher)
       - [Parser](#parser)
     - [Robots.txt](#robotstxt)
-      - [detail-index1](#detail-index1)
-        - [출처](#출처)
 
 # 크롤링_00
 
@@ -42,9 +40,9 @@
 
 - 사이트의 크롤러 트래픽을 관리
 
-#### detail-index1
+---
 
-##### 출처
+- 레퍼런스
 
 > https://velog.io/@mowinckel/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%A7%81-I#%F0%9F%A7%AD-fetcher-parser-frontier
 
