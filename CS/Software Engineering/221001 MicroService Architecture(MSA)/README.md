@@ -17,7 +17,7 @@
     
     - [*ESB(Enterprise Service Bus)](#esbenterprise-service-bus)
       
-      # MicroService Architecture(MSA)
+# MicroService Architecture(MSA)
 
 > 하나의 Application을 다수의 **독립적**인 Service로 구성하는 Architecture Style
 > 
