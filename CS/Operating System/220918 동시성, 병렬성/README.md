@@ -1,6 +1,8 @@
 - [동시성, 병렬성](#동시성-병렬성)
+  
   - [동시성(Concurrency) vs 병렬성(Parallelism)](#동시성concurrency-vs-병렬성parallelism)
-# 동시성, 병렬성
+    
+    # 동시성, 병렬성
 
 ## 동시성(Concurrency) vs 병렬성(Parallelism)
 
