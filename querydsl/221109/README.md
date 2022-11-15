@@ -20,9 +20,7 @@
 
 ### Querydsl 설정
 
-- 
-
-#### detail-index1
+- #### detail-index1
 
 ---
 
