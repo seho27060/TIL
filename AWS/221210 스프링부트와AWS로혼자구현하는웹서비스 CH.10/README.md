@@ -76,7 +76,7 @@
 #### 4. 무중단 배포 테스트
 
 - 하 ^^ 왜안됨!!!!!!!!!!!!!!!!!!!!!
-  - `application-real2.properties` 파일 내에서 server_port 를 server.port로 오타나서 안됐던거 였다 ^^..
+  - `application-real2.properties` 파일 내에서 server.port 를 server_port로 오타나서 안됐던거 였다 ^^..
 - CodeDeploy의 로그를 확인하여 배포를 확인한다.
 - `nohup.out`에서 스프링부트의 로그를 확인하여 프로젝트의 작동을 확인한다.
 - 이를 통해 서버 중단이 없는 시스템 구축을 완료하였다!!ㄴ
