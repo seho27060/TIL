@@ -26,10 +26,11 @@
   
   - EC2 혹은 리눅스 서버에 엔진엔스 1대와 스프링 부트 Jar를 2대 사용한다.
     
-    - 사용자 -> Ninnx ---> springboot 1(ver 1.1/port:8080)
-                                  ㄴ springboot 2(ver 1.0/port:8081)
-      위와 같은 구조로 Ningx는 springboot ver 1을 바라본다.
-      사용자가 서비스 접속시 Nginx를 통해 port:8080으로 접속한다.
+    - 사용자
+      - Nginx
+        - springboot 1(ver 1.1/port:8080)
+        - springboot 2(ver 1.0/port:8081)
+    - 위와 같은 구조로 Nginx는 springboot ver 1을 바라본다. 사용자가 서비스 접속시 Nginx를 통해 port:8080으로 접속한다.
     - 새로운 버전(ver1.2)을 배포시, Nginx가 바라보지 않은 springboot 2에 배포를 시작한다.
       - Nginx가 바라보지 않기 때문에 영향이 없다.
     - 배포 완료시 Nginx Reload를 통해 springboot2를 바라보도록 한다.
