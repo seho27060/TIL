@@ -110,7 +110,69 @@
 
 #### Detached & Attached 컨테이너
 
-- 
+- Attached : 터미널과 실행중인 컨테이너를 연결. 컨테이너의 로그를 실시간 확인 가능. 실행 default
+  
+  > `docker attach container_name`으로 분리된 컨테이너와 연결할 수 있다.
+
+- Dettached : 터미널을 실행 후 터미널과 분리한다. 
+  
+  > `docker run -d ~~` 로 컨테이너를 실행후 터미널과 분리 가능하다.
+
+- `docker logs container_name`으로 각 컨테이너의 log를 확인 가능하다!
+
+#### 인터렉티브 모드 실행
+
+- `docker run -it container_id` 로 인터렉티브 모드가 실행 가능하다.
+  
+  - help를 통해 옵션값을 찾아보자.
+
+- `docker start -a -i container_name`로 이전에 생성한 컨테이너를 attached로 interactive로 실행 가능하다.
+
+#### 이미지 & 컨테이너 삭제하기
+
+- 실행중이지 않은 이전에 생성된 컨테이너를 삭제해보자.
+  
+  - `docker rm container_name` : 컨테이너를 삭제한다. 실행중인건 끄고 삭제해야함 
+  
+  - 중지된 컨테이너 자동 제거하기
+    
+    - `docker run -p port1:port2 -d --rm image_id` : image_id를 detached로 실행하며, 실행 컨테이너가 중지하면 자동으로 제거한다.
+
+- 실행중인 컨테이너가 없는 이미지를 삭제해보자
+  
+  - `docker images` : 이미지 목록 확인
+  
+  - `docker rmi image_id` : 이미지 삭제하기
+    
+    - 만약 해당 이미지로 만들어진 컨테이너가 있다면 연관 컨테이너 삭제 or 강제 삭제해야한다.
+  
+  - `docker image prune` : 컨테이너로 사용되지 않는 이미지를 삭제(prune : 가지치기) 한다.
+
+#### 컨테이너에/로부터 파일 복사하기
+
+- 컨테이너에  붙여넣기 
+  
+  - `docker cp from/. container_name:/to`
+
+- 컨테이너로부터 붙여넣기
+  
+  - `docker cp from/. container_name:/to`
+
+- 근데 컨테이너 크기가 엄청 큰거아니면 자그마한 수정사항에도 다시 빌드해서 해야할듯;
+
+#### 컨테이너와 이미지에 태그, 이름 지정
+
+- 컨테이너에 이름 지정
+  
+  - `docker run -p port:port --name STRING image_id` : STRING을 이름으로 하는 컨테이너 생성
+
+- 이미지에 태그 지정
+  
+  - 베이스이미지에 태그를 추가하여 특정 버전, 구성을 선택하여 사용할 수 있다.
+  
+  - `FROM imageName:imageTag`
+  
+  - 또는 내가 원하는 태그를 추가하여 새로운 이미지를 생성할 수 있다.
 
 ---
 
