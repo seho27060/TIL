@@ -17,7 +17,7 @@
 | [AWS](https://github.com/seho27060/TIL/tree/master/AWS)                         |     |
 | [CS](https://github.com/seho27060/TIL/tree/master/CS)                           |     |
 | [DataScience](https://github.com/seho27060/TIL/tree/master/DataScience)         |     |
-| [Design-Pattern](https://github.com/seho27060/TIL/tree/master/Design-Pattern)   |     |
+| [Design Pattern](https://github.com/seho27060/TIL/tree/master/Design-Pattern)   |     |
 | [Django](https://github.com/seho27060/TIL/tree/master/Django)                   |     |
 | [Docker](https://github.com/seho27060/TIL/tree/master/Docker)                   |     |
 | [Etc](https://github.com/seho27060/TIL/tree/master/Etc)                         |     |
@@ -28,7 +28,7 @@
 | [React](https://github.com/seho27060/TIL/tree/master/React)                     |     |
 | [Sass](https://github.com/seho27060/TIL/tree/master/Sass)                       |     |
 | [Springboot](https://github.com/seho27060/TIL/tree/master/Springboot)           |     |
-| [Today's-Keyword](https://github.com/seho27060/TIL/tree/master/Today's-Keyword) |     |
+| [Today's Keyword](https://github.com/seho27060/TIL/tree/master/Today's-Keyword) |     |
 | [TypeScript](https://github.com/seho27060/TIL/tree/master/TypeScript)           |     |
 | [Vue.js](https://github.com/seho27060/TIL/tree/master/Vue.js)                   |     |
 | [querydsl](https://github.com/seho27060/TIL/tree/master/querydsl)               |     |
