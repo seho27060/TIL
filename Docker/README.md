@@ -10,3 +10,4 @@
 | [221216 Docker & Kubernetes 실전 가이드 06](https://github.com/seho27060/TIL/tree/master/Docker/221216_Docker_06) | Docker Compose를 활용한 다중 컨테이너 오케스트레이션  |
 | [221217 Docker & Kubernetes 실전 가이드 07](https://github.com/seho27060/TIL/tree/master/Docker/221217_Docker_07) | 유틸리티 컨테이너                            |
 | [221218 Docker & Kubernetes 실전 가이드 08](https://github.com/seho27060/TIL/tree/master/Docker/221218_Docker_08) | docker-compose의 복잡한 세부 설정            |
+| [221219 Docker & Kubernetes 실전 가이드 09](https://github.com/seho27060/TIL/tree/master/Docker/221219_Docker_09) | AWS EC2를 활용한 도커 컨테이너 배포 - 1          |
