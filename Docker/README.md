@@ -12,3 +12,5 @@
 | [221218 Docker & Kubernetes 실전 가이드 08](https://github.com/seho27060/TIL/tree/master/Docker/221218_Docker_08) | docker-compose의 복잡한 세부 설정            |
 | [221219 Docker & Kubernetes 실전 가이드 09](https://github.com/seho27060/TIL/tree/master/Docker/221219_Docker_09) | AWS EC2를 활용한 도커 컨테이너 배포 - 1          |
 | [221220 Docker & Kubernetes 실전 가이드 10](https://github.com/seho27060/TIL/tree/master/Docker/221220_Docker_10) | AWS EC2를 활용한 도커 컨테이너 배포 - 2          |
+| [221221 Docker & Kubernetes 실전 가이드 11](https://github.com/seho27060/TIL/tree/master/Docker/221221_Docker_11) | AWS EC2를 활용한 도커 컨테이너 배포 - 3          |
+| [221222 Docker & Kubernetes 실전 가이드 12](https://github.com/seho27060/TIL/tree/master/Docker/221222_Docker_12) | AWS EC2를 활용한 도커 컨테이너 배포 - 4          |

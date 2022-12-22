@@ -64,6 +64,75 @@
     
     - 보안그룹..접근 id, password, 작업 그룹..여러 요인이 있지만 정확한 이유를 파악하지 못했다.
 
+### Production 환경과 Development 환경
+
+- 클라우드 접근 url, 머신에 따른 네트워크 접근 및 보안 설정 등 여러 설정이 실제 배포되는 Production 환경과 개발이 진행되는 Development 환경에서 차이점이 발생할 수 있다. 
+
+- 해당 강의의 예시로 React의 경우 로컬에서는 `npm start`로 실행할 수 있지만, 실제 배포 환경에서는 `npm run build`를 통해 최적화된 형태로 실행한다.
+
+- 이와 같이 배포환경과 개발환경에서 설정 및 실행의 차이점으로 인해 "빌드 전용 컨테이너"로 배포환경에서 애플리케이션을 실행한다.
+
+#### 멀티 스테이지 빌드
+
+- 배포 전용 컨테이너를 위해 `Dockerfile.prod`라는 도커파일을 생성한다.
+  
+  ```dockerfile
+  FROM node:14-alpine as build
+  
+  WORKDIR /app
+  
+  COPY package.json .
+  
+  RUN npm install
+  
+  COPY . .
+  
+  EXPOSE 3000
+  
+  RUN npm run build
+  # 첫번째 빌드(스테이지) 실행
+  
+  # FROM을 통해 기존의 baseimage를 변경할 수 있다.
+  FROM nginx:stable-alpine
+  
+  COPY --from=build /app/build /usr/share/nginx/html
+  
+  EXPOSE 80
+  # nginx를 통해 배포 웹 서버 실
+  CMD ["nginx", "-g", "daemon off;"]
+  ```
+  
+  - 1개의 도커 파일 내에서 baseimage 교체를 통해 2번의 빌드(멀티 스테이지 빌드)가 가능하다.
+  - React 애플리케이션을 먼저 빌드한 후, 이를 위한 nginx 서버를 빌드한다.
+
+- 멀티 스테이지 이미지 구축
+  
+  - 기존의 이미지 구축과 같이 진행한다
+  
+  - `docker build -f frontend/Dockerfile.prod -t 도커허브레포위치 ./frontend`
+    
+    - `-f`옵션을 통해 빌드 파일을 지정할 수 있다.
+
+#### 스탠드얼론 프론트엔드 앱 배포하기
+
+- AWS ECS의 같은 클러스터에 새로운 Task를 생성하여 frontend 서버를 스탠드얼론 모드로 배포해보자.
+
+- frontend 애플리케이션내에서 backend 서버 연결을 위한 url에 환경(개발 or 배포)에 따라 다른 url을 `App.js`상에서 환경변수 상으로 사용한다.
+  
+  - 개발환경에서는 localhost
+  
+  - 배포 환경에서는 backend의 로드밸런서의 DNS name으로 접근한다.
+
+-  Task 정의
+  
+  - frontend 컨테이너 생성
+
+- Service 생성
+  
+  - 새로 정의한 Task를 기반으로 Service를 생성한다
+  
+  - frontend용 로드밸런서 생성 후 Target group과 보안 그룹을 생성하여 할당한다.
+
 ---
 
 - 레퍼런스
