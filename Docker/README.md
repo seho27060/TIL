@@ -14,3 +14,4 @@
 | [221220 Docker & Kubernetes 실전 가이드 10](https://github.com/seho27060/TIL/tree/master/Docker/221220_Docker_10) | AWS EC2를 활용한 도커 컨테이너 배포 - 2          |
 | [221221 Docker & Kubernetes 실전 가이드 11](https://github.com/seho27060/TIL/tree/master/Docker/221221_Docker_11) | AWS EC2를 활용한 도커 컨테이너 배포 - 3          |
 | [221222 Docker & Kubernetes 실전 가이드 12](https://github.com/seho27060/TIL/tree/master/Docker/221222_Docker_12) | AWS EC2를 활용한 도커 컨테이너 배포 - 4          |
+| [221223 Docker & Kubernetes 실전 가이드 13](https://github.com/seho27060/TIL/tree/master/Docker/221223_Docker_13) | Docker 요약                            |
