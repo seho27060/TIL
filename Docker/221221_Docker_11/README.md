@@ -1,6 +1,6 @@
 [TOC]
 
-# Docker & Kubernetes 11
+# Docker 11
 
 ## Docker 컨테이너 배포하기 - 03
 

@@ -1,6 +1,6 @@
 [TOC]
 
-# Docker & Kubernetes 02
+# Docker 02
 
 ## Docker 이미지 & 컨테이너 : 코어 빌딩 블록
 

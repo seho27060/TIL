@@ -123,7 +123,7 @@
   
   - 배포 환경에서는 backend의 로드밸런서의 DNS name으로 접근한다.
 
--  Task 정의
+- Task 정의
   
   - frontend 컨테이너 생성
 
