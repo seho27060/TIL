@@ -68,11 +68,37 @@
 
 - `zookeeper`를 원하는 버전 다운로드
 
-- `zookeeper`에 따른 적절한 `jdk` 실행
+- `zookeeper`에 따른 적절한 `jdk` 다운로드
 
 - 환경 변수로 `JAVA_HOME`에 `jdk`를 설정해준다. 
 
+- `/conf`내에 `zoo.cfg`파일을 생성하고 설정을 할당한다. (ex : 포트번호는 2181)
+
 - cmd, linux에 따라 `zkServer`파일로 서버를 시작하고 `zkCli`로 커맨드라인을 실행한다.
+  
+  - `Will not attempt to authenticate using SASL (unknown error)` 에러가 발생하는데 서버가 안열려서 그런거였다^^..
+  
+  - Window 환경에서 git bash로 열었다가.. cmd로 열었다가..했는데 cmd로 하는게 맞는듯
+  
+  - git bash에서 .sh로 열었다가.. .cmd로 열었다가..했는데 안되는거 보니 그냥 cmd로 열어서 해야할듯
+
+#### 라이브러리 스레딩 모델
+
+- 어플리케이션의 메인 메서드가 메인 스레드에 실행된다.
+
+- Zookeeper 객체가 생성되면, 2개의 추가 스레드가 생성된다.
+  
+  - Event Thread
+    
+    - 모든 주키퍼 클라이언트의 상태 변겅 이벤트 관리
+    
+    - 모든 Znode의 Watchers, Triggers 관리
+  
+  - IO Thread 
+    
+    - 어플리케이션과 주키버 서버간의 통신 담당
+
+# 
 
 ---
 
