@@ -83,7 +83,9 @@
 
 - 위와 같이 구성되면 리더 노드가 중단될 시 해당 알림을 받는 유일한 다음 순서 노드가 후계자 노드가 된다.
 
-
+> 전체적인 오류 ^^..
+> 
+> `Exception in thread "main" org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /election/c_` 의 오류로 왜 node가 생성이 안되는거지 ^^..했는데 내가 따로 /election zNode를 생성해줬어야 했다 ^^... 하
 
 ---
 
