@@ -18,4 +18,4 @@
 | [221227_Distributed_System_04](https://github.com/seho27060/TIL/tree/master/Distributed-System/221227_Distributed_System_04)                 | 클러스터 관리, 레지스트리 및 디스커버리              |
 | [221227_HTTP-Server-In-Distributed-System](https://github.com/seho27060/TIL/tree/master/CS/Network/221227_HTTP-Server-In-Distributed-System) | 분산 시스템 내에서의 HTTP Server             |
 | [221228_HTTP-Client-In-Distributed-System](https://github.com/seho27060/TIL/tree/master/CS/Network/221228_HTTP-Client-In-Distributed-System) | 분산 시스템 내에서의 HTTP Client             |
-| [221228_Distributed_System_05](https://github.com/seho27060/TIL/tree/master/Distributed-System/221227_Distributed_System_04)                 | 분산 시스템에서 메시지를 전송하는 방법               |
+| [221228_Distributed_System_05](https://github.com/seho27060/TIL/tree/master/Distributed-System/221228_Distributed_System_05)                 | 분산 시스템에서 메시지를 전송하는 방법               |
