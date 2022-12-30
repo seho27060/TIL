@@ -20,3 +20,4 @@
 | [221228_HTTP-Client-In-Distributed-System](https://github.com/seho27060/TIL/tree/master/CS/Network/221228_HTTP-Client-In-Distributed-System) | 분산 시스템 내에서의 HTTP Client                |
 | [221228_Distributed_System_05](https://github.com/seho27060/TIL/tree/master/Distributed-System/221228_Distributed_System_05)                 | 분산 시스템에서 메시지를 전송하는 방법                  |
 | [221229_Distributed_System_06](https://github.com/seho27060/TIL/tree/master/Distributed-System/221229_Distributed_System_06)                 | 분산형 문서 검색 서비스 구축하기 - 실제 서비스에 분산 시스템 적용 |
+| [221230_Distributed_System_07](https://github.com/seho27060/TIL/tree/master/Distributed-System/221230_Distributed_System_07)                 | 부하 분산(Load Balancing)                  |
