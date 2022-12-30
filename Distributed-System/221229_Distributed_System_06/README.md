@@ -74,7 +74,7 @@
 
 #### 실행화면
 
-![](C:\Users\seho2\AppData\Roaming\marktext\images\2022-12-29-22-11-17-image.png)
+![](https://user-images.githubusercontent.com/81341784/210027266-3c018ec1-1b8e-477c-8a5c-3af96d208952.png)
 
 - 주키퍼 서버
 
