@@ -63,7 +63,7 @@
     
     - `onWorker`는 노드 자신은 워커이며 `registerToCluster`를 통해 자기 자신을 클러스터에 등록한다.
   
-  ![](C:\Users\seho2\AppData\Roaming\marktext\images\2022-12-27-20-38-20-image.png)
+  ![](https://user-images.githubusercontent.com/81341784/210027363-ac12bb2c-1189-4500-b1ed-2a17c4bf0259.png)
   
   위와 같이 리더로 선출된 리더 노드에서는 클러스터에 등록된 노드의 address를 확인하고 있다.(서비스 레지스트리로 등록, 서비스 디스커버리로 노드 관리)
 
