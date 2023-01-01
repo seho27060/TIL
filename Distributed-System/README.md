@@ -22,3 +22,4 @@
 | [221229_Distributed_System_06](https://github.com/seho27060/TIL/tree/master/Distributed-System/221229_Distributed_System_06)                 | 분산형 문서 검색 서비스 구축하기 - 실제 서비스에 분산 시스템 적용 |
 | [221230_Distributed_System_07](https://github.com/seho27060/TIL/tree/master/Distributed-System/221230_Distributed_System_07)                 | 부하 분산(Load Balancing)                  |
 | [221231_Distributed_System_08](https://github.com/seho27060/TIL/tree/master/Distributed-System/221231_Distributed_System_08)                 | 분산형 메시지 브로커 - 카프카 개요                   |
+| [230101_Distributed_System_09](https://github.com/seho27060/TIL/tree/master/Distributed-System/230101_Distributed_System_09)                 | 아파치 카프카 클러스터 구축                        |

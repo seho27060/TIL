@@ -2,7 +2,7 @@
 
 # Distributed_System_08
 
-## 분산형 메시지 브로커
+## 분산형 메시지 브로커 - 01
 
 #### 메시지 브로커의 필요성
 
@@ -66,7 +66,7 @@
   
   - 메시지를 카프카에 보내면 Record에 저장된다.
   
-  -  Record는 Key, Value(메시지), Timestamp로 구성되어 있다.
+  - Record는 Key, Value(메시지), Timestamp로 구성되어 있다.
 
 - Topic 
   
