@@ -24,3 +24,5 @@
 | [221231_Distributed_System_08](https://github.com/seho27060/TIL/tree/master/Distributed-System/221231_Distributed_System_08)                 | 분산형 메시지 브로커 - 카프카 개요                   |
 | [230101_Distributed_System_09](https://github.com/seho27060/TIL/tree/master/Distributed-System/230101_Distributed_System_09)                 | 아파치 카프카 클러스터 구축                        |
 | [230102_Distributed_System_10](https://github.com/seho27060/TIL/tree/master/Distributed-System/230102_Distributed_System_10)                 | 분산형 스토리지 및 데이터베이스 - 샤딩과 복제, 정족수 합의     |
+| [230103_Distributed_System_11](https://github.com/seho27060/TIL/tree/master/Distributed-System/230102_Distributed_System_10)                 | 분산형 MongoDB                            |
+| [230104_Distributed_System_12](https://github.com/seho27060/TIL/tree/master/Distributed-System/230104_Distributed_System_12)                 | 클라우드 컴퓨팅                               |
