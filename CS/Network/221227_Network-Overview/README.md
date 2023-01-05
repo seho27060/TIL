@@ -1,4 +1,13 @@
-[TOC]
+- [Computer Science](#computer-science)
+  - [네트워크 통신](#네트워크-통신)
+      - [멀티쓰레딩 vs 분산 시스템](#멀티쓰레딩-vs-분산-시스템)
+    - [TCP/ IP Network Model](#tcp-ip-network-model)
+      - [Layer 1 - Data Link](#layer-1---data-link)
+      - [Layer 2 - Internet](#layer-2---internet)
+      - [Layer 3 - Transport](#layer-3---transport)
+      - [Layer 4 - Application](#layer-4---application)
+      - [Client Server Request Example](#client-server-request-example)
+
 
 # Computer Science
 

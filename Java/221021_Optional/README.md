@@ -1,3 +1,11 @@
+- [Today's Keyword\_01](#todays-keyword_01)
+  - [Java](#java)
+    - [Optional](#optional)
+      - [orElse와 orElseGet](#orelse와-orelseget)
+      - [Optional 사용법 가이드](#optional-사용법-가이드)
+    - [Lambda](#lambda)
+      - [Lambda Expression](#lambda-expression)
+      - [detail-index1](#detail-index1)
 # Today's Keyword_01
 
 ## Java

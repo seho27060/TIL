@@ -1,4 +1,11 @@
-[TOC]
+- [분산 시스템에서의 HTTP 클라이언트](#분산-시스템에서의-http-클라이언트)
+  - [HTTP Client](#http-client)
+    - [통신 성능의 주요 기능](#통신-성능의-주요-기능)
+      - [Synchronous Communication(동기식 통신)](#synchronous-communication동기식-통신)
+      - [Asynchromous Communication(비동기식 통신)](#asynchromous-communication비동기식-통신)
+      - [Connection Pooling](#connection-pooling)
+      - [44](#44)
+
 
 # 분산 시스템에서의 HTTP 클라이언트
 

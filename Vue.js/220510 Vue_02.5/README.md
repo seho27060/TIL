@@ -1,6 +1,13 @@
+- [Vue\_03](#vue_03)
+  - [Vue](#vue)
+    - [Workshop](#workshop)
+      - [Youtube API, Vue CLI 활용하여 컴포넌트간 관계 형성](#youtube-api-vue-cli-활용하여-컴포넌트간-관계-형성)
+    - [Practice](#practice)
+      - [Props와 emit event를 활용하여 아래와 같이 데이터를 주고받는 Application을 완성하시오.](#props와-emit-event를-활용하여-아래와-같이-데이터를-주고받는-application을-완성하시오)
+
+
 # Vue_03
 ## Vue
-[toc]
 
 ### Workshop
 #### Youtube API, Vue CLI 활용하여 컴포넌트간 관계 형성

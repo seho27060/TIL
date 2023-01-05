@@ -1,4 +1,10 @@
-[TOC]
+- [Database Sharding](#database-sharding)
+  - [데이터베이스 샤딩](#데이터베이스-샤딩)
+    - [Sharding](#sharding)
+      - [장점과 단점](#장점과-단점)
+      - [SQL과 Nosql의 샤딩](#sql과-nosql의-샤딩)
+      - [Sharding Strategies](#sharding-strategies)
+
 
 # Database Sharding
 

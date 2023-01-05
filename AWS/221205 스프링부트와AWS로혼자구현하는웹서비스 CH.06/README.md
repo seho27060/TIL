@@ -1,4 +1,10 @@
-[TOC]
+- [Springboot and AWS\_01](#springboot-and-aws_01)
+  - [CH.06 AWS 서버 환경을 만들어보자](#ch06-aws-서버-환경을-만들어보자)
+    - [AWS EC2](#aws-ec2)
+    - [EC2 인스턴스 생성하기](#ec2-인스턴스-생성하기)
+      - [EIP(Elastic IP, 탄력적 IP)](#eipelastic-ip-탄력적-ip)
+      - [EC2 서버에 접속하기](#ec2-서버에-접속하기)
+
 
 # Springboot and AWS_01
 

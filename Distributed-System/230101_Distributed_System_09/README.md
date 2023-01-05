@@ -1,4 +1,14 @@
-[TOC]
+- [Distributed\_System\_09](#distributed_system_09)
+  - [분산형 메시지 브로커 - 02](#분산형-메시지-브로커---02)
+    - [아파치 카프카 클러스터 구축 실습](#아파치-카프카-클러스터-구축-실습)
+      - [Kafka Cluster Architecture](#kafka-cluster-architecture)
+    - [카프카 다운로드 및 실행](#카프카-다운로드-및-실행)
+      - [설정](#설정)
+      - [실행](#실행)
+      - [여러개의 카프카 브로커 실행](#여러개의-카프카-브로커-실행)
+      - [Java를 활용한 카프카 프로듀서](#java를-활용한-카프카-프로듀서)
+      - [java를 활용한 카프카 컨슈머](#java를-활용한-카프카-컨슈머)
+
 
 # Distributed_System_09
 

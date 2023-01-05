@@ -1,4 +1,16 @@
-[TOC]
+- [Distributed System 10](#distributed-system-10)
+  - [분산형 스토리지 및 데이터베이스](#분산형-스토리지-및-데이터베이스)
+    - [분산형 스토리지 소개](#분산형-스토리지-소개)
+    - [데이터베이스 샤딩(Database Sharding)](#데이터베이스-샤딩database-sharding)
+    - [NoSQL Database Advantages and Disadvantages](#nosql-database-advantages-and-disadvantages)
+    - [일관된 해싱을 이용한 동적 샤딩](#일관된-해싱을-이용한-동적-샤딩)
+      - [Consistent Hashing(일관된 해싱)](#consistent-hashing일관된-해싱)
+    - [데이터베이스 복제, 일관성 모델 및 정족수 합의](#데이터베이스-복제-일관성-모델-및-정족수-합의)
+      - [Database Replication(데이터베이스 복제)](#database-replication데이터베이스-복제)
+      - [Replicated Database Architectures(복제 데이터베이스 구조)](#replicated-database-architectures복제-데이터베이스-구조)
+      - [Database Consistency Models(데이터베이스 일관성 모델)](#database-consistency-models데이터베이스-일관성-모델)
+      - [Quorum Consensus(정족수 합의)](#quorum-consensus정족수-합의)
+
 
 # Distributed System 10
 

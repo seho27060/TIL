@@ -1,4 +1,11 @@
-[TOC]
+- [Distributed\_System\_06](#distributed_system_06)
+  - [분산형 문서 검색 서비스 구축하기](#분산형-문서-검색-서비스-구축하기)
+    - [TF-IDF Algorithm](#tf-idf-algorithm)
+    - [병렬 TF-IDF 알고리즘과 시스템 아키텍쳐](#병렬-tf-idf-알고리즘과-시스템-아키텍쳐)
+      - [병렬 TF-IDF 알고리즘](#병렬-tf-idf-알고리즘)
+      - [시스템 아키텍쳐](#시스템-아키텍쳐)
+      - [실행화면](#실행화면)
+
 
 # Distributed_System_06
 

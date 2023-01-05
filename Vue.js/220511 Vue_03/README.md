@@ -1,6 +1,32 @@
+- [Vue\_03](#vue_03)
+	- [Vuex](#vuex)
+		- [Vuex Intro](#vuex-intro)
+			- [Vuex](#vuex-1)
+				- [State](#state)
+				- [상태 관리 패턴](#상태-관리-패턴)
+			- [Vuex management pattern](#vuex-management-pattern)
+		- [Vuex Core Concepts](#vuex-core-concepts)
+			- [1. State(=data)](#1-statedata)
+			- [2. Mutations](#2-mutations)
+			- [3. Actions](#3-actions)
+			- [4. Getters(=computed)](#4-getterscomputed)
+			- [Vuex Core Concepts 정리](#vuex-core-concepts-정리)
+		- [Vuex Todo App](#vuex-todo-app)
+			- [Set project \& components](#set-project--components)
+			- [Create Todo](#create-todo)
+			- [JavaScript Destructuring assignment(분해 할당)](#javascript-destructuring-assignment분해-할당)
+		- [Delete Todo/ Update Todo](#delete-todo-update-todo)
+			- [JavaScript Spread Syntax](#javascript-spread-syntax)
+			- [Getters](#getters)
+			- [Component Binding Helper](#component-binding-helper)
+				- [mapState](#mapstate)
+				- [mapGetters](#mapgetters)
+				- [mapActions](#mapactions)
+		- [LocalStorage](#localstorage)
+
+
 # Vue_03
 ## Vuex
-[toc]
 
 ### Vuex Intro
 #### Vuex

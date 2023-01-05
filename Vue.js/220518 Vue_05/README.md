@@ -1,6 +1,29 @@
+- [Vue\_05](#vue_05)
+	- [Vue Front](#vue-front)
+	- [Vue Router](#vue-router)
+		- [404 page](#404-page)
+			- [404 Component](#404-component)
+		- [Navigation Guard](#navigation-guard)
+			- [전역 가드(Global Before Guards)](#전역-가드global-before-guards)
+		- [Vuex Module](#vuex-module)
+			- [Module 분리](#module-분리)
+			- [Vue front에서의 출력과정.](#vue-front에서의-출력과정)
+	- [Vuex - Component 구성](#vuex---component-구성)
+		- [Accounts Login](#accounts-login)
+		- [Article Read/ Like](#article-read-like)
+			- [Read](#read)
+			- [Like](#like)
+		- [Artcle CUD](#artcle-cud)
+			- [Create](#create)
+		- [Comment CRUD](#comment-crud)
+			- [Create](#create-1)
+			- [Read](#read-1)
+			- [Update](#update)
+			- [Delete](#delete)
+
+
 # Vue_05
 ## Vue Front
-[toc]
 - Vue(front)에서 Server에 데이터(json)요청. 여기서 Server는 Django로 구축되어 있다. Django는 DRF를 이용하여 데이터를 serializing 하고 json 파일로 데이터를 넘겨준다.
 
 

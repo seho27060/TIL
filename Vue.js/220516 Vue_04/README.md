@@ -1,6 +1,32 @@
+- [Vue\_04](#vue_04)
+  - [Vue Vue+API 서버 활용](#vue-vueapi-서버-활용)
+  - [Vue 04](#vue-04)
+    - [Server \& Client](#server--client)
+      - [Server](#server)
+      - [Client](#client)
+    - [Start Project Model + Serializer](#start-project-model--serializer)
+    - [CORS](#cors)
+      - [Same-origin policy(SOP)](#same-origin-policysop)
+      - [Origin(출처)](#origin출처)
+      - [Cross-Origin Resource Sharing(CORS)](#cross-origin-resource-sharingcors)
+        - [Cross-Origin Resource Sharing Policty (CORS Policy)](#cross-origin-resource-sharing-policty-cors-policy)
+      - [Why CORS?](#why-cors)
+      - [How CORS?](#how-cors)
+      - [Access-Control-Allow-Origin 응답 헤더.](#access-control-allow-origin-응답-헤더)
+      - [CORS 시나리오](#cors-시나리오)
+      - ['django-cors-headers' 라이브러리](#django-cors-headers-라이브러리)
+    - [Authentication \& Authorization](#authentication--authorization)
+      - [Authentication](#authentication)
+      - [Authorization](#authorization)
+          - [Authentication and Authorization work together : 회원 가입을 하고 로그인을 하면 할 수 있는 권한 생성/ 인증이후에 권한이 따라오는 경우가 많고 각 인증에 따라 다른 권한 부여.](#authentication-and-authorization-work-together--회원-가입을-하고-로그인을-하면-할-수-있는-권한-생성-인증이후에-권한이-따라오는-경우가-많고-각-인증에-따라-다른-권한-부여)
+    - [DRF Authentication](#drf-authentication)
+      - [다양한 인증 방식.](#다양한-인증-방식)
+        - [Basic Token Authentication](#basic-token-authentication)
+        - [JWT(Json Web Tokens)](#jwtjson-web-tokens)
+
+
 # Vue_04
 ## Vue Vue+API 서버 활용
-[toc]
 
 ## Vue 04
 ### Server & Client

@@ -1,4 +1,15 @@
-[TOC]
+- [Distributed System 12](#distributed-system-12)
+  - [클라우드 컴퓨팅 및 전역 확장 배포](#클라우드-컴퓨팅-및-전역-확장-배포)
+    - [클라우드 컴퓨팅](#클라우드-컴퓨팅)
+      - [Cloud Infrastructure Building Blocks](#cloud-infrastructure-building-blocks)
+    - [클라우드 배치](#클라우드-배치)
+        - [Instance Templates](#instance-templates)
+    - [인스턴스 그룹, 자동 확장 및 자동 복구](#인스턴스-그룹-자동-확장-및-자동-복구)
+      - [Instance Groups](#instance-groups)
+    - [멀티 리전 배치 및 전역 부하 분산](#멀티-리전-배치-및-전역-부하-분산)
+      - [Multi Region Deployment](#multi-region-deployment)
+    - [Cloud Load Balancing](#cloud-load-balancing)
+
 
 # Distributed System 12
 

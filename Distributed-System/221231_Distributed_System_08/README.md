@@ -1,4 +1,20 @@
-[TOC]
+- [Distributed\_System\_08](#distributed_system_08)
+  - [분산형 메시지 브로커 - 01](#분산형-메시지-브로커---01)
+      - [메시지 브로커의 필요성](#메시지-브로커의-필요성)
+    - [Message Broker](#message-broker)
+      - [메시지 브로커 특징](#메시지-브로커-특징)
+    - [Apache Kafka](#apache-kafka)
+      - [카프카의 추상화 계층](#카프카의-추상화-계층)
+      - [Consumer](#consumer)
+    - [분산 시스템에서의 카프카](#분산-시스템에서의-카프카)
+      - [Kafka Perfomance and Scalability](#kafka-perfomance-and-scalability)
+        - [카프카 브로커와 Topic Partitions](#카프카-브로커와-topic-partitions)
+        - [Cunsumers and Topic Partitions](#cunsumers-and-topic-partitions)
+        - [Topic Partitions and Parallelism](#topic-partitions-and-parallelism)
+      - [Kafka Fault Tolerance](#kafka-fault-tolerance)
+        - [Replication - Leader \& Followers](#replication---leader--followers)
+      - [Data Persistence in Kafka](#data-persistence-in-kafka)
+
 
 # Distributed_System_08
 

@@ -1,6 +1,21 @@
-# 계절학기_2일차
-[toc]
+- [계절학기\_2일차](#계절학기_2일차)
+	- [PJT 2. Datebase 설계 및 SQL 작성](#pjt-2-datebase-설계-및-sql-작성)
+		- [관계형 데이터 모델](#관계형-데이터-모델)
+			- [Entity 표현](#entity-표현)
+			- [Attribute 표현](#attribute-표현)
+			- [Relationship 표현](#relationship-표현)
+			- [Relationship 읽기](#relationship-읽기)
+			- [관계 형태 - 1:1관계](#관계-형태---11관계)
+			- [관계 형태 - M:1 관계](#관계-형태---m1-관계)
+			- [관계 형태 - M:M 관계](#관계-형태---mm-관계)
+			- [관계형 데이터 모델 - UID Bar](#관계형-데이터-모델---uid-bar)
+		- [데이터베이스 설계](#데이터베이스-설계)
+			- [Index](#index)
+				- [B\*Tree 인덱스](#btree-인덱스)
+	- [과제](#과제)
 
+
+# 계절학기_2일차
 ## PJT 2. Datebase 설계 및 SQL 작성
 
 ### 관계형 데이터 모델

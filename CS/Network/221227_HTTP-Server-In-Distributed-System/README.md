@@ -1,4 +1,13 @@
-[TOC]
+- [분산 시스템에서의 HTTP 서버](#분산-시스템에서의-http-서버)
+      - [HTTP Transaction](#http-transaction)
+    - [HTTP - Request Structure](#http---request-structure)
+      - [method](#method)
+      - [Path](#path)
+      - [Protocol Version](#protocol-version)
+      - [HTTP Headers](#http-headers)
+      - [Message Body](#message-body)
+    - [HTTP - Response Structure](#http---response-structure)
+
 
 # 분산 시스템에서의 HTTP 서버
 

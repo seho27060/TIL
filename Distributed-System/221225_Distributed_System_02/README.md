@@ -1,4 +1,14 @@
-[TOC]
+- [Distributed\_System\_02](#distributed_system_02)
+  - [분산 코디네이터와 분산 알고리즘](#분산-코디네이터와-분산-알고리즘)
+    - [클러스터 코디네이션과 리더 선출 알고리즘-01](#클러스터-코디네이션과-리더-선출-알고리즘-01)
+      - [노드와 클러스터](#노드와-클러스터)
+      - [필요성](#필요성)
+      - [특징](#특징)
+      - [리더 선출 알고리즘(Leader Election Algorithm)](#리더-선출-알고리즘leader-election-algorithm)
+      - [Zookeeper 설치 및 실행](#zookeeper-설치-및-실행)
+      - [라이브러리 스레딩 모델](#라이브러리-스레딩-모델)
+- [](#)
+
 
 # Distributed_System_02
 

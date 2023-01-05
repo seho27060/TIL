@@ -1,4 +1,9 @@
-[TOC]
+- [Querydsl\_01](#querydsl_01)
+  - [JPQL vs QueryDsl](#jpql-vs-querydsl)
+    - [JPQL](#jpql)
+    - [QueryDsl](#querydsl)
+    - [기본 Q-type 활용](#기본-q-type-활용)
+      - [Q클래스를 사용하는 3가지 방법](#q클래스를-사용하는-3가지-방법)
 
 # Querydsl_01
 

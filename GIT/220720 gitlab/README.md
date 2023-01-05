@@ -1,4 +1,11 @@
-[toc]
+- [gitlab branch](#gitlab-branch)
+  - [branch merge and request](#branch-merge-and-request)
+    - [branch](#branch)
+      - [checkout](#checkout)
+      - [push](#push)
+      - [merge request](#merge-request)
+      - [branch update](#branch-update)
+      - [로컬에서 커밋 취소](#로컬에서-커밋-취소)
 # gitlab branch
 ## branch merge and request
 ### branch
