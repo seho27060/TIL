@@ -1,6 +1,6 @@
 [TOC]
 
-![](C:\Users\seho2\AppData\Roaming\marktext\images\2023-01-05-22-24-41-image.png)
+![](https://user-images.githubusercontent.com/81341784/210832483-787c0f84-2d32-4b8a-9bb9-e7ee9a043cbc.png)
 
 # Spark-with-Python 00
 
@@ -20,9 +20,7 @@
   
   - `내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다.` 어쩌고 하는 오류가 났는데^^^^^ 환경변수 설정할때 `PYSPARK_PYTHON`을 `python.exe`로 설정해줘야 한다 ^^^^^ python39 같은 폴더가 아니라 ^^^^^^^^^^^^^^^^^^^^^^^^
   
-  ![](C:\Users\seho2\AppData\Roaming\marktext\images\2023-01-06-01-17-09-image.png)
-
-- 
+  ![](https://user-images.githubusercontent.com/81341784/210832500-00dcf6ea-3992-4a2a-817a-0a20ea460e99.png)
 
 ---
 
