@@ -116,7 +116,7 @@
   
   - 우리가 어떤 값을 원하는지, 해당 값을 위해 어떤 작업을 해야하는지 최적화된 방법을 계산함
 
-- 스파크 드라이버 스크립트 내에서 RDD에 액션을 실행하기 전까지 아무런 일도 일어나지 않는다.
+- 스파크 드라이버 스크립트 내에서 RDD에 **액션을 실행하기 전**까지 **아무런 일도 일어나지 않는다.**
 
 ### 등급 히스토그램 워크스루
 
@@ -177,6 +177,26 @@
 ### 키/ 값 RDD 및 연령별 평균 친구 예시
 
 - RDD의 장점은 key-value형식의 데이터를 구조화 할 수 있다는 점.
+
+#### Spark can do special stuff with key/value data
+
+- `reduceByKey()` : 우리가 정의한 함수를 이용하여 같은 key값의 field 값을 활용하는 함수
+  
+  - 특정 나이대는 몇명의 친구를 갖고 있는가?
+
+- `groupByKey()` : 같은 key를 갖는 값 끼리 그룹화함
+
+- `sortByKey` : 같은 key끼리 분류
+
+- `join`, `rightOuterJoin` 등등 SQL에서 사용하는 것과 같은 함수도 있다.
+
+#### Mapping just the values of a key/value RDD
+
+- key/value 데이터에 대하여 변형된 RDD에 있는 키를 수정하지 않을 때는 `map`,`flatMap` 대신 `mapValues()`, `flatMapValues()`를 사용한다.
+  
+  - key/value RDD의 **핵심**적인 부분
+
+- 데이터를 셔플하는 대신 기존 RDD에서 분할된 데이터를 그대로 유지하여 더 효율적이다.
 
 --- 
 
