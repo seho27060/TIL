@@ -15,7 +15,7 @@
       - [분산시스템 내의 원시적(Primitive) 실행](#분산시스템-내의-원시적primitive-실행)
       - [ZooKeeper quorums](#zookeeper-quorums)
     - [Oozie](#oozie)
-        - [워크플로우 조직하기](#워크플로우-조직하기)
+      - [워크플로우 조직하기](#워크플로우-조직하기)
     - [Zeppelin](#zeppelin)
 
 # udemy HDFS_05
@@ -61,12 +61,44 @@
 ### YARN
 
 - 하둡 클러스터의 리소스 관리
+- 내부적으로 작동함
+- 노드를  구분하여 어떻게 분산해 클러스터에 걸쳐 처리할지 결정한다.
+  - 또한 네트워크에 의한 데이터 이동을 최소화한다.
+- 클러스터 CPU 사용을 최적화하여 **데이터를 최대한 지역적으로 유지**해서 애플리케이션 프로세스가 최대한 빠르게 데이터 블록을 HDFS로 가져올 수 있도록 한다.
 
-- Yet Another Resource Nagotiator
+#### Yet Another Resource Nagotiator(또다른 리소스 교섭자)
 
-- Cluster Storage Layer인 HDFS위에 Cluster Compute Layer 에 위치한다.
+- Cluster Storage Layer인 HDFS위에 Cluster Compute Layer 에 YARN이 위치한다.
+  
+  - YARN은 클러스터에 **컴퓨팅 작업을 분산**하고
+  
+  - HDFS는 클러스터에 데이터를 분산해 저장한다.
 
 - YARN 위에 맵리듀스, 스파크가 실행된다.
+
+#### 작동과정
+
+![](C:\Users\seho2\AppData\Roaming\marktext\images\2023-01-07-15-22-48-image.png)
+
+- Client Node에서 실행을 요청받고, YARN(Resource Manager)가 NodeManager에게 작동 요청을 전달
+
+- NodeManager는 YARN과 협업하여 특정 프로세스를 갖는 NodeManager Node들을 실행한다.
+
+#### How YARN works
+
+- 애플리케이션은 Resource Manager(YARN)에게 작업을 클러스터에 분산시키도록 요청한다.
+
+-  YARN은 HDFS의 블록을 특정하여 동일한 노드에 작업을 처리하여 데이터 지역성(Data Locality)를 유지한다.
+
+- 다음과 같은 일정 관리(Scheduling) 옵션이 있다.
+  
+  - FIFO - First in, First out
+  
+  - Capacity - YARN 클러스터에서 여러 애플리케이션을 동시에 실행할때, 여유 용량이 충분하다면 병렬적으로 실행한다
+  
+  - Fair - 클러스터의 리소스를 모두 사용중인 규모가 큰 작업이 실행 중일때, 작은 작업을 실행시키기 위해 큰 규모 작업의 리소스를 가져와 사용한다.
+
+- 
 
 ### TEZ
 
