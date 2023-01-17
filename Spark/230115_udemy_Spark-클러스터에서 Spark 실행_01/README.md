@@ -2,7 +2,7 @@
 
 # Spark-with-Python 06
 
-## 클러스터에서 Spark 실행
+## 클러스터에서 Spark 실행 - 01
 
 ### Amazon Elastic MapReduce 소개
 
