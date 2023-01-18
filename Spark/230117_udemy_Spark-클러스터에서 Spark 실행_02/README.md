@@ -1,6 +1,6 @@
 [TOC]
 
-# Spark-with-Python 06
+# Spark-with-Python 07
 
 ## 클러스터에서 Spark 실행 - 02
 
