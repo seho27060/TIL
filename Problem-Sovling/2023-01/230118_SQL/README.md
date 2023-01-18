@@ -65,6 +65,43 @@
     
     - 외부에서 안할시 8월에서 10월까지 5회이상 대여한 차량id을 전체 기간에서 조회하게 된다.
 
+### 카테고리 별 도서 판매량 집계하기
+
+- 판매중인 도서 정보 테이블 `BOOK`와 판매 기록 정보 테이블 `BOOK_SALES`  이 있을때, 2022년 1월의 
+
+- 카테고리 별 
+
+- 도서 판매량을 합산하고 
+
+- 카테고리, 총 판매량을 출력하라.
+
+- 결과는 카테고리명을 기준으로 오름차순 출력
+
+#### 풀이과정
+
+- 2022년 1월의 도서 ID 별 총 판매량은 계산됐으나.. 도서 ID와 카테고리를 매칭해서 어떻게 카테고리로 그룹화하지?..
+  
+  - 파생한 테이블을 서브쿼리로 활용하려 했으나.. 도서 ID와 카테고리를 매칭하는 방법이 떠오르지 않음..
+
+- `JOIN`도 아니고 그냥 `FROM TABLE A, TABLE B`이런식으로 출력해보다가 
+  
+  - 이게 `JOIN`이 어찌어찌되는거 같음 왜냐면 행이 더 많은 쪽 테이블에 공통된 컬럼으로 묶이는 듯
+  
+  - 그러다가 어 그럼..`BOOK` 테이블의 도서 ID와 `BOOK_SALES` 테이블의 도서 ID가 동일한 애들끼리 묶으면?...
+
+- `WHERE BOOK.BOOK_ID = BOOK_SALES.BOOK_ID` 를 사용해서 `BOOK_ID`별로 묶었다.
+  
+  - 이렇게 테이블이 `BOOK_ID`로 묶이면.. `BOOK` 테이블의 `CATEGORY`도 묶이게 된다!
+
+- 정답 코드
+  
+  ```sql
+  SELECT BOOK.CATEGORY, SUM(BOOK_SALES.SALES) AS TOTAL_SALES FROM BOOK, BOOK_SALES
+  WHERE BOOK.BOOK_ID = BOOK_SALES.BOOK_ID AND TO_CHAR(BOOK_SALES.SALES_DATE,'YYYY-MM') = '2022-01' 
+  GROUP BY BOOK.CATEGORY
+  ORDER BY BOOK.CATEGORY
+  ```
+
 ### 성과 및 피드백
 
 #### 성과
@@ -104,6 +141,34 @@
   ```
   
   또는 `NUMBER`형식의 값을 위와 같이 필터링할 수 있다.
+
+##### WHERE 과 JOIN _ ON의 차이점
+
+- [카테고리 별 도서 판매량 집계하기](###카테고리 별 도서 판매량 집계하기)에서 많은 이들이 `JOIN`으로 풀이했는데.. 나는 몰라서 `WHERE`로 풀었다. 무슨차이점이 있을까?
+
+- **`JOIN`으로 테이블을 합치면서 필터링하느냐?**/ **`JOIN`으로 합쳐진 테이블에 다시 필터링하느냐?** 의 차이이다.
+  
+  - `SQL`에서는 `FROM` -> `ON` -> `JOIN` -> `WHERE` 순서로 쿼리가 실행된다.
+
+- ```sql
+  SELECT BOOK.CATEGORY, SUM(BOOK_SALES.SALES) AS TOTAL_SALES FROM BOOK, BOOK_SALES
+  WHERE BOOK.BOOK_ID = BOOK_SALES.BOOK_ID AND TO_CHAR(BOOK_SALES.SALES_DATE,'YYYY-MM') = '2022-01' 
+  ```
+  
+  위에서는 `JOIN`을 쓴건 아니지만 `FROM`에서 두개 테이블을 참고하므로.. 합쳐진 테이블 전체를 훑어 `WHERE`의 조건으로 필터링한다.
+
+- `JOIN`으로 (가상)테이블을 생성되는 과정에서 `ON`에 할당된 조건에 의해 필터링 된 값은 채워지고 아니면 `NULL`로 남겨지게 된다.
+  
+  ```sql
+  SELECT BOOK.CATEGORY, SUM(BOOK_SALES.SALES) AS TOTAL_SALES FROM BOOK
+  JOIN BOOK_SALES
+  ON BOOK.BOOK_ID = BOOK_SALES.BOOK_ID
+  AND TO_CHAR(BOOK_SALES.SALES_DATE,'YYYY-MM') = '2022-01'
+  ```
+  
+  위와 같이 `WHERE`의 조건을 그대로 `ON`에 옮겨주면.. 테이블이 합쳐지면서 `ON`의 조건으로 필터링된다.
+
+- 뭐.. 이게 좋다 나쁘다보단 각각 작동과정이 다르니 입맛에 맞게 사용해야 할듯하다.
 
 #### 피드백
 
