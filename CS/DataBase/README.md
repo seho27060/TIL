@@ -5,6 +5,6 @@
 | [220418_DB-Model-relationship-II](https://github.com/seho27060/TIL/tree/master/CS/DataBase/220418_DB-Model-relationship-II) |             |
 | [220614_Datebase-설계-및-SQL-작성](https://github.com/seho27060/TIL/tree/master/CS/DataBase/220614_Datebase-설계-및-SQL-작성)         |             |
 | [220619_Relative-Datavbase](https://github.com/seho27060/TIL/tree/master/CS/DataBase/220619_Relative-Datavbase)             |             |
-| [220902_데이터베이스종류]((https://github.com/seho27060/TIL/tree/master/CS/DataBase/220902_데이터베이스종류)                                |             |
+| [220902_데이터베이스종류](https://github.com/seho27060/TIL/tree/master/CS/DataBase/220902_데이터베이스종류)                                |             |
 | [220917_Transaction](https://github.com/seho27060/TIL/tree/master/CS/DataBase/220917_Transaction)                           |             |
 | [230102_Database-Sharding](https://github.com/seho27060/TIL/tree/master/CS/DataBase/230102_Database-Sharding)               | 데이터베이스에서 샤딩 |
