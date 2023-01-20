@@ -42,6 +42,16 @@
   
   - `py4j.protocol.py4jjavaerror: an error occurred while calling o27.text.`이런 오류였다..
 
+### GraphX(그래프X)
+
+- 스파크의 기능 중 하나로 특정 상황에 특화된 기능
+
+- 스칼라 API에서만 지원한다.
+
+
+
+
+
 ---
 
 - 레퍼런스

@@ -2,7 +2,7 @@
 
 # Spark-with-Python 02
 
-## Spark 기본 사항 및 RDD 인터페이스
+## Spark 기본 사항 및 RDD 인터페이스 - 02
 
 ### 위치별 RDD 및 최소 온도 필터링
 
@@ -130,13 +130,7 @@
   wordCountsSorted = wordCounts.map(lambda x: (x[1], x[0])).sortByKey()
   ```
 
-
-
-
-
 - 함수형 프로그래밍이라더니..`lambda`만 음청 사용하네..
-
-
 
 --- 
 

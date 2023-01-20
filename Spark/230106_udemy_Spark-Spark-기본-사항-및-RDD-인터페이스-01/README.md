@@ -2,7 +2,7 @@
 
 # Spark-with-Python 01
 
-## Spark 기본 사항 및 RDD 인터페이스
+## Spark 기본 사항 및 RDD 인터페이스 - 01
 
 ### Spark 3의 새로운 기능
 
