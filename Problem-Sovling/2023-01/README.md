@@ -8,3 +8,4 @@
 | [230118 PGMS_SQL](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230118_SQL)        | `TO_NUMBER`, `BETWEEN A AND B`, `JOIN _ ON`과 `WHERE`의 차이점 |
 | [230119_Algorithm](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230119_Algorithm) | `LIS` 알고리즘                                                |
 | [230120_Algorithm](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230120_Algorithm) | `에라토스테네스의 체` 알고리즘                                         |
+| [230122 PGMS_SQL](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230122_SQL)        | `IS NULL`,`JOIN`,`OUTER JOIN`,`LEFT(또는 RIGHT) JOIN`       |
