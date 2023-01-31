@@ -1,9 +1,14 @@
-- [Database Sharding](#database-sharding)
-  - [데이터베이스 샤딩](#데이터베이스-샤딩)
-    - [Sharding](#sharding)
-      - [장점과 단점](#장점과-단점)
-      - [SQL과 Nosql의 샤딩](#sql과-nosql의-샤딩)
-      - [Sharding Strategies](#sharding-strategies)
+- [CAP](#cap)
+  - [CAP 정리](#cap-정리)
+    - [CAP 특성](#cap-특성)
+      - [Consistency](#consistency)
+      - [Availability](#availability)
+      - [Partition Tolerance](#partition-tolerance)
+    - [CAP정리 기반 NoSQL 데이터베이스 유형](#cap정리-기반-nosql-데이터베이스-유형)
+      - [CP 데이터베이스 예시 : MongoDB](#cp-데이터베이스-예시--mongodb)
+      - [AP 데이터베이스 예시 : Cassandra](#ap-데이터베이스-예시--cassandra)
+    - [마이크로서비스에 대한 작업](#마이크로서비스에-대한-작업)
+
 
 # CAP
 

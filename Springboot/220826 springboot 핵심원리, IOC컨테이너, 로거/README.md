@@ -19,8 +19,9 @@
           - [다양한 의존관계 주입 방법](#다양한-의존관계-주입-방법)
         - [@RequiredArgsConstructor](#requiredargsconstructor)
   - [Logger](#logger)
-      - [5단계의 로그 레벨(1:상위 - 5:하위)](#5단계의-로그-레벨1상위---5하위)
-# Springboot_04
+    - [5단계의 로그 레벨(1:상위 - 5:하위)](#5단계의-로그-레벨1상위---5하위)
+      
+      # Springboot_04
 
 ## Spring 핵심원리
 
@@ -224,3 +225,9 @@ public void exampleMethod{
 - 실행흐름에서 원하는 단계의 정보만 선택적으로 확인할 수 있다.
 
 - 지정한 레벨보다 낮은 레벨의 메시지들은 출력되지 않으나, 높은 레벨은 출력한다.
+
+--- 
+
+#### 레퍼런스
+
+> [스프링 - 생성자 주입을 사용해야 하는 이유, 필드인젝션이 좋지 않은 이유](https://yaboong.github.io/spring/2019/08/29/why-field-injection-is-bad/)
