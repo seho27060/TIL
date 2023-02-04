@@ -12,4 +12,5 @@
 | [230124_Algorithm](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230124_Algorithm) | `우선 순위 큐`와 `위상 정렬` 결합응용                                   |
 | [230124 PGMS_SQL](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230124_SQL)        | 행 제한, `OFFSET`, `FETCH`                                   |
 | [230125_Algorithm](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230125_Algorithm) | `LCS` 알고리즘                                                |
+| [230126 PGMS_SQL](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230126_SQL)        | 조건에 알맞는 컬럼을 출력하는 `CASE _ WHEN`                            |
 | [230129 PGMS_SQL](https://github.com/seho27060/TIL/tree/master/Problem-Sovling/2023-01/230129_SQL)        | `SUBSTR`                                                  |
