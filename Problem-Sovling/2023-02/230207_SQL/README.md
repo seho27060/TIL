@@ -50,6 +50,65 @@
   
   일단 그룹화에 `RANK`을 적용한 테이블을 서브 쿼리로 활용하여 `RANK`가 1인 값, 즉 가장 큰 값을 출력한다.
 
+### 년, 월, 성별 별 상품 구매 회원 수 구하기
+
+- `USER_INFO` 테이블과 `ONLINE_SALE` 테이블을 활용하여 년, 원, `GENDER` 별로 분류된 사용자 수를 출력하라.
+
+- `GENDER`가 없다면 출력하지 않는다.
+
+- 년, 월, `GENDER` 를 오름차순으로 정렬하여 출력한다.
+
+#### 풀이과정
+
+- 아니 맞게했는데 `EXTRACT`안했다고 안되는건 억까임!!!!!!
+
+- 이전 답은 아래와 같다.
+  
+  ```sql
+  SELECT TO_CHAR(A.SALES_DATE,'YYYY') AS YEAR
+  ,TO_CHAR(A.SALES_DATE,'MM') AS MONTH
+  ,B.GENDER AS GENDER 
+  ,COUNT(DISTINCT A.USER_ID) AS USERS
+  FROM ONLINE_SALE A
+  JOIN USER_INFO B ON A.USER_ID=B.USER_ID
+  WHERE B.GENDER IS NOT NULL
+  GROUP BY TO_CHAR(A.SALES_DATE,'YYYY'),TO_CHAR(A.SALES_DATE,'MM'),B.GENDER
+  ORDER BY YEAR ASC,MONTH ASC,GENDER ASCNDER ASC
+  ```
+  
+  `USER_INFO`와 `ONLINE_SALE`을 `USER_ID`를 기준으로 `JOIN`하고 `GENDER`가 없는 유저는 제외시킨다.
+  이제 `GROUP BY`를 활용하여 `TO_CHAR`로 년, 월로 변환한 값과 `GENDER`에 따라 분류한다.
+  이때 `USER_ID`는 중복될수 있다.
+  
+  - 왜냐, 2022년 1월에 1일과 30일에 `USER_ID=3`인 고객이 2번 사면, 그룹화를 통해 2번 찍힌다.
+  
+  - 중복을 없애기 위해 `COUNT(DISTINCT USER_ID)`를 잊지 말자.
+
+- 근데 틀린다. 왜냐. 출력할때 `YEAR`와 `MONTH`의 자료값이 맞지 않나보다. 허허
+
+- 정답 코드는 아래와 같다.
+  
+  ```sql
+  SELECT EXTRACT(YEAR FROM A.SALES_DATE) AS YEAR
+  ,EXTRACT(MONTH FROM A.SALES_DATE) AS MONTH
+  ,B.GENDER AS GENDER 
+  ,COUNT(DISTINCT A.USER_ID) AS USERS
+  FROM ONLINE_SALE A
+  JOIN USER_INFO B ON A.USER_ID=B.USER_ID
+  WHERE B.GENDER IS NOT NULL
+  GROUP BY EXTRACT(YEAR FROM A.SALES_DATE),EXTRACT(MONTH FROM A.SALES_DATE),B.GENDER
+  ORDER BY YEAR ASC,MONTH ASC,GENDER ASC
+  ```
+  
+  `EXTRACT`함수를 이용하여 `DATE`형식인 `SALES_DATE`에서 `YEAR`와 `MONTH`를 추출한다.
+  이때 그룹화도 `EXTRACT`를 활용하여 진행한다.
+
+- 결과값은 `MONTH`의 값 빼곤 같다.
+  
+  - `TO_NUMBER(TO_CHAR(A.SALES_DATE,'MM')) AS MONTH`로 하니깐 된다^^;;;
+  
+  - `01`을 출력하냐, `1`을 출력하냐의 차이였다 ^^..
+
 ### 성과 및 피드백
 
 #### 성과
@@ -143,12 +202,27 @@
   |        | DOPA | 서울      | 50     | 53         | 100        |
   |        | RALO | 서울      | 23     | 23         | 100        |
 
+##### EXTRACT()
+
+- `DATE`형식의 값에서 원하는 날짜형식을 뽑아낼수(extract)있다.
+
+- 아래와 같이 사용한다.
+  
+  - `EXTRACT(DATE_COLUMN FROM DATE_FUNCTION)`
+  
+  - `DATE_COLUMN`에는 `DATE`형식의 `COLUMN`값을 넣고
+  
+  - `DATE_FUNCTION`에는 날짜 함수(`YEAR`, `MONTH`,`DAY`, `HOUR`,`MINUTE`, `SECOND`)를 넣는다.
+
 #### 피드백
 
 - 서브 쿼리와 `JOIN`하여 문제를 해결했지만.. 항상 그렇듯 더 좋은 방법이 있다.
+- 요구사항에 데이터형이 있는지 확인하자.
 
 ---
 
 #### 레퍼런스
 
 > https://school.programmers.co.kr/questions/42834
+> 
+> https://school.programmers.co.kr/questions/39218
