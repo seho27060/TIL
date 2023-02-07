@@ -1,6 +1,6 @@
-# 230203-BOJ-별자리 만들기
+# 230206-BOJ-행성 터널
 
-## 별자리 만들기
+## 행성 터널
 
 - https://www.acmicpc.net/problem/2887
 
