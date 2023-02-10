@@ -10,3 +10,5 @@
 | [230102_Database-Sharding](https://github.com/seho27060/TIL/tree/master/CS/DataBase/230102_Database-Sharding)               | 데이터베이스에서 샤딩       |
 | [230131_CAP](https://github.com/seho27060/TIL/tree/master/CS/DataBase/230131_CAP)                                           | `NoSQL`의 `CAP` 정리 |
 | [230201_Index](https://github.com/seho27060/TIL/tree/master/CS/DataBase/230201_Index)                                       | `DB`의 `Index`     |
+| [2302010_이상현상과-함수-종속성](https://github.com/seho27060/TIL/tree/master/CS/DataBase/2302010_이상현상과-함수-종속성)                       | DB설계 미비로 발생하는 문제  |
+| [230210_정규화](https://github.com/seho27060/TIL/tree/master/CS/DataBase/230210_정규화)                                           | 정규화의 종류           |
