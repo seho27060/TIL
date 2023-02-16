@@ -1,29 +1,10 @@
-- [Springboot_03](#springboot_03)
-  - [연관관계](#연관관계)
-    - [JPA 영속성 전이(CASCADE)](#jpa-영속성-전이cascade)
-      - [Entity의 상태](#entity의-상태)
-      - [CascadeType](#cascadetype)
-    - [Wrapper class](#wrapper-class)
-    - [Generic](#generic)
-    - [NullPointerException(NPE)](#nullpointerexceptionnpe)
-      - [Optional](#optional)
-    - [더티체킹(Dirty Checking)](#더티체킹dirty-checking)
+[TOC]
+
 # Springboot_03
 
-## 연관관계
-
-- 연관관계의 테이블에서 특정 엔티티가 삭제되면 그에 연관된 다른 테이블의 엔티티는 어떻게 처리해야 할까? 삭제?/ 그대로 두기?
-
-### JPA 영속성 전이(CASCADE)
+## JPA 영속성 전이(CASCADE)
 
 - 영속성전이(CASCADE) : 부모 엔티티가 영속화될 때, 자식 엔티티도 같이 영속화되고/ 부모 엔티티가 삭제될 때 자식 엔티티도 삭제된다. 특정 엔티티를 영속 상태로 만들 때 연관된 엔티티도 함께 영속 상태로 전이되는 것을 의미한다.
-
-#### Entity의 상태
-
-1. `Transient`: 객체를 생성하고, 값을 주어도 JPA나 hibernate가 그 객체에 관해 아무것도 모르는 상태. 즉, 데이터베이스와 매핑된 것이 아무것도 없다.  
-2. `Persistent`: 저장을 하고나서, JPA가 아는 상태(관리하는 상태)가 된다. 그러나 .save()를 했다고 해서, 이 순간 바로 DB에 이 객체에 대한 데이터가 들어가는 것은 아니다. JPA가 persistent 상태로 관리하고 있다가, 후에 데이터를 저장한다.(1차 캐시, Dirty Checking(변경사항 감지), Write Behind(최대한 늦게, 필요한 시점에 DB에 적용) 등의 기능을 제공한다)  
-3. `Detached`: JPA가 더이상 관리하지 않는 상태. JPA가 제공해주는 기능들을 사용하고 싶다면, 다시 persistent 상태로 돌아가야한다.  
-4. `Removed`: JPA가 관리하는 상태이긴 하지만, 실제 commit이 일어날 때, 삭제가 일어난다.
 
 #### CascadeType
 
@@ -155,69 +136,3 @@ if (ex1 != null){
 Optional<Example> ex2 = ...;
 ex2.ifPresent(System.out::println);
 ```
-
-### 더티체킹(Dirty Checking)
-
-- 더티 체킹 : Transaction 안에서 엔티티의 변경이 일어나면, **변경 내용을 자동**으로 데이터베이스에 **반영**하는 JPA 특징
-
-- JPA는 엔티티 매니저가 엔티티를 저장/조회/수정/삭제 한다.
-
-- 엔티티 매니저의 메서드에는 저장(persist)/ 조회(find)/ 삭제(delete)로 수정에 해당하는 메서드는 없다.
-
-- 수정 기능 대신 더티 체킹(dirty checking)을 지원한다.
-
--  JPA 영속성 컨텍스트
-
-<img title="" src="https://blog.kakaocdn.net/dn/cokEKI/btqygTOISLW/TrI5hAUoR9wiVP92OJlIJ0/img.png" alt="" data-align="left">
-
-- 더티체킹이 일어나는 환경
-  
-  - 영속 상태(Managed)안에 있는 엔티티인 경우
-  
-  - **Transaction** 안에서 엔티티를 변경하는 경우
-
-- Transaction을 사용하는 방법
-  
-  - Service Layer에서 `@Transaction`을 사용하는 경우
-  
-  ```java
-  @Service
-  public class ExampleSercvice{
-      @Transactional
-      public void updateInfo(Logn id, String name){
-          User user = userRepository.findById(id);
-          user.setName(name);
-      }
-  }
-  ```
-  
-  - EntityTransacton을 이용해서 트랜잭션을 범위를 지정하고 사용하는 경우
-  
-  ```java
-  @Service
-  public class ExampleService {
-       public void updateInfo(Long id, String name) {
-            EntityManager em = entityManagerFactory.createEntityManager();
-            EntityTransaction tx = em.getTransaction();
-            // 1. 트랜잭션 시작
-            tx.begin();
-            // 2.User 엔티티를 조회 & User 스냅샷 생성
-            User user = em.find(User.class, id);
-            // 3.User 엔티티의 name을 변경
-            user.setName(name);
-            // 4. 트랜잭션
-            // 5.User 스냅샷과 최종 user의 내용을 비교해서 Dirty를 Checking 해서 Update Query 발생
-            tx.commit();
-       }
-  }
-  ```
-
-- `@Transactional`을 사용했을때
-  
-  1. Table : User에서 PK id가 2인 엔티티 객체 조회
-  
-  2. user의 email을 examUpdate@mail.com으로 수정(**Dirty Checking**)
-  
-  3. 수정된 이메일 examUpdate@mail.com 을 가진 user엔티티 유무 확인, 2번과정에서 수정되었기에 true 출력
-
-- `@Transactional`을 사용하지 않은 경우, 2번 과정의 더티체킹이 발생하지 않아 디비의 데이터가 수정되지 않는다.
