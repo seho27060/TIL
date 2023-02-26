@@ -6,6 +6,7 @@
     - [Lambda](#lambda)
       - [Lambda Expression](#lambda-expression)
       - [detail-index1](#detail-index1)
+
 # Today's Keyword_01
 
 ## Java
