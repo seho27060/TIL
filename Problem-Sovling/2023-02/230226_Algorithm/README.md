@@ -1,6 +1,6 @@
 # 230226-BOJ-틱택토
 
-## 탑
+## 틱택토
 
 - https://www.acmicpc.net/problem/7682
 
