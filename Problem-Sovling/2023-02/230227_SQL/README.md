@@ -150,6 +150,8 @@
 
 #### 레퍼런스
 
+> https://school.programmers.co.kr/questions/44847
+> 
 > [신기한 연구소 :: [HOW]SQL 서브쿼리 다양하게 사용하는 방법, 스칼라, 인라인 뷰, 중첩, 오라클(ORACLE)](https://tiboy.tistory.com/568)
 > 
 > [[Oracle] 오라클 서브쿼리 종류 및 사용법 (SubQuery)](https://gent.tistory.com/464)
