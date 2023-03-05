@@ -1,83 +1,35 @@
-- [springboot_01](#springboot_01)
-  - [Springboot MVC](#springboot-mvc)
-    - [Controller](#controller)
-    - [Service](#service)
-      - [ServiceImpl](#serviceimpl)
-    - [Domain](#domain)
-        - [Domain-DTO](#domain-dto)
-    - [Repository](#repository)
+# Flow of Controller in Spring MVC
 
-# springboot_01
+## Flow of Controller in Spring MVC
 
-## Springboot MVC
+- `Spring MVC pattern`에서의 `Controller` 영역의 작동 과정과 관련 어노테이션의 역할을 알아보자.
 
-- 유지보수와 기능 구현을 위해 각 역할에 맞는 Layer로 구분한다.
+#### Controller
 
-- 왜 한개의 
+- `Dispatch Servlet` 을 통한 `URL` 요청을 실질적으로 처리하는 영역
+  
+  - 백엔드 컨트롤러(Backend Controller)라고 한다.
 
-### Controller
-
-- Dispatch Servlet 을 통해 url을 요청받고, Controller에 전달
-
-- Controlloer에서는 url을 분석하여 매칭되는 서비스 호출
+- `Controller`에서는 url을 분석하여 매칭되는 `Service`를 호출한다.
 
 ```java
 // src/main/java/come/ssafy/project/Controller/ChallengeController.java
 @RestController
-@RequestMapping("/challenge") //
-@RequiredArgsConstructor // 필수 args 생성자 : final(상수)인 멤버변수의 생성자
-// final 은 생성자에서 처리해줘야함
+@RequestMapping("/challenge")
+@RequiredArgsConstructor 
 public class ChallengeController 
 
-    private final SomeService someService; //
+    private final SomeService someService;
 
-    // @MethodnameMapping
-    @GetMapping("/info")
-    public void someApi() {
-
-    }
-
-    // Post 요청시의 데이터(body)를 클래스의 매개변수로 받는다
-    // @RequestBody 어노테이션 사용시, 입력값을 매개변수의 타입으로 매핑시켜준다.
-    // 예) 입력값 = { id : 1, content: "--", name :"name",level:3}
-
-    // DTO, Data Transfer object :  데이터 전이 객체
-    // VO, value object : 값 객체
-
-    // (디스패처서블릿 ->) 컨트롤러 -> 서비스 (-> 레포짓)
     @PostMapping("/save")
     public void saveChallenge(@RequestBody CRDTO challenge){
         someService.saveChallenge(challenge);
 
     }
-
-    @GetMapping("/save")
-    public void saveChallenge(){
-
-    }
 }
 ```
 
-- 어노테이션
-  
-  - RestController = Controller + ResponseBody : Json 형태로 객체 데이터를 반환함
-  
-  - RequiredArgsConstructor : 필수 args 생성자, final(상수)인 멤버변수의 생성자역할
-  
-  - GetMapping("url") : `GET` method이면서 해당 url인 요청을 처리
-  
-  - PostMapping("url") : `Post` method이면서 해당 url인 요청을 처리
-
-```java
-    @PostMapping("/save")
-    public void saveChallenge(@RequestBody CRDTO challenge){
-        someService.saveChallenge(challenge); // 정의한 someService에서 saveChallenge 호
-    }
-```
-
-- someService라는 `Service`인터페이스에 선언한 `saveChallenge`메서드를 호출한다.
-
-### Service
+#### Service
 
 - Interface 형식의 `Service` 선언
 
@@ -98,7 +50,7 @@ public interface SomeService {
 
 - Interface를 구현하기 위해 `SomeServiceImpl` 생성
 
-#### ServiceImpl
+##### ServiceImpl
 
 - Interface인 Service의 구현
 
@@ -129,7 +81,7 @@ public class SomeServiceImpl implements SomeService{
 - @Override를 통해 Interface에서 선언된 `saveChallenge`메서드의 실행을 구현한다.
 - "build" 패턴을 통해 데이터가 저장된다.
 
-### Domain
+#### Domain
 
 - 실제 DB테이블과 매핑되는 `Entity`클래스를 생성한다.
 
@@ -178,7 +130,7 @@ public class CRDTO {
   - AllArgsConstructor : 모든 인자의 생성자를 생성
   - NoArgsConstructor : 기본 빈 생성자 생성
 
-### Repository
+#### Repository
 
 ```java
 public interface ChallengeRepository extends JpaRepository<Challenge, Long> {
@@ -196,4 +148,10 @@ public interface ChallengeRepository extends JpaRepository<Challenge, Long> {
 
 - DB에 접근하여 데이터에 대한 CRUD를 실행 가능한 Layer이다. 필요한 기능을 쿼리 메서드 규칙에 따라 작성하거나, 커스터마이징한 쿼리 메서드를 등록할수도 있다.
 
+---
 
+- 레퍼런스
+
+> https://velog.io/@h220101/SpringBoot-%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B6%80%ED%8A%B8-spring-MVC-%ED%8C%A8%ED%84%B4-%EB%8F%99%EC%9E%91
+> 
+> [Spring MVC Framework | 👨🏻‍💻 Tech Interview](https://gyoogle.dev/blog/web-knowledge/spring-knowledge/Spring%20MVC.html)

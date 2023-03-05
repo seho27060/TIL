@@ -2,6 +2,7 @@
 
 | 폴더이름                                                                                                                                         | 요약                                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| [220827_HTTP-method-And-Imdempotent](https://github.com/seho27060/TIL/tree/master/CS/Network/220827_HTTP-method-And-Imdempotent)             | `HTTP` 메서드와 멱등성                            |
 | [221223_Stateful_vs_Stateless](https://github.com/seho27060/TIL/tree/master/CS/Network/221223_Stateful_vs_Stateless)                         | Stateful과 Stateless 통신의 차이점                |
 | [221227_HTTP-for-Distributed-System](https://github.com/seho27060/TIL/tree/master/CS/Network/221227_HTTP-for-Distributed-System)             | 분산 시스템 내에서의 HTTP Server                    |
 | [221227_Network-Overview](https://github.com/seho27060/TIL/tree/master/CS/Network/221227_Network-Overview)                                   | 네트워크 개요                                    |
