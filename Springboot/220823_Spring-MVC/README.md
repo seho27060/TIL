@@ -1,3 +1,13 @@
+- [Spring MVC pattern](#spring-mvc-pattern)
+  - [Spring MVC](#spring-mvc)
+    - [작동 과정](#작동-과정)
+    - [구성 요소](#구성-요소)
+      - [Dispatcher Servlet](#dispatcher-servlet)
+      - [Handler Mapping](#handler-mapping)
+      - [Controller](#controller)
+      - [View Resolver](#view-resolver)
+
+---
 # Spring MVC pattern
 
 ## Spring MVC
@@ -74,4 +84,4 @@
 > 
 > [[Spring] Dispatcher-Servlet(디스패처 서블릿)이란? 디스패처 서블릿의 개념과 동작 과정 - MangKyu's Diary](https://mangkyu.tistory.com/18)
 
-# 
+
