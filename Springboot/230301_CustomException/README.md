@@ -1,4 +1,11 @@
-[TOC]
+- [CustomException](#customexception)
+  - [사용자 정의 예외](#사용자-정의-예외)
+    - [Why CustomException?](#why-customexception)
+    - [CustomException 적용하기](#customexception-적용하기)
+      - [1. ErrorCode 생성](#1-errorcode-생성)
+      - [3. ErrorResponseEntity 생성](#3-errorresponseentity-생성)
+
+---
 
 # CustomException
 

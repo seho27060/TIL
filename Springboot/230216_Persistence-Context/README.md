@@ -1,4 +1,12 @@
-[TOC]
+- [Persistence Context](#persistence-context)
+  - [영속성 컨텍스트](#영속성-컨텍스트)
+      - [영속성의 생명주기](#영속성의-생명주기)
+    - [영속성 컨텍스트의 특징](#영속성-컨텍스트의-특징)
+      - [영속성 컨텍스트의 장점](#영속성-컨텍스트의-장점)
+    - [Flush(플러시)](#flush플러시)
+    - [더티체킹(Dirty Checking)](#더티체킹dirty-checking)
+
+---
 
 # Persistence Context
 

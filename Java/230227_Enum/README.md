@@ -1,4 +1,9 @@
-[TOC]
+- [Java](#java)
+  - [Enum](#enum)
+      - [특징](#특징)
+    - [`Enum` 생성하기](#enum-생성하기)
+
+---
 
 # Java
 

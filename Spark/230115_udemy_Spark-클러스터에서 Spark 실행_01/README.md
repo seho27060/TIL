@@ -1,4 +1,12 @@
-[TOC]
+- [Spark-with-Python 06](#spark-with-python-06)
+  - [클러스터에서 Spark 실행 - 01](#클러스터에서-spark-실행---01)
+    - [Amazon Elastic MapReduce 소개](#amazon-elastic-mapreduce-소개)
+    - [\[활동\] AWS/ Elastic MapReduce 계정 설정 및 PuTTY 설정](#활동-aws-elastic-mapreduce-계정-설정-및-putty-설정)
+    - [파티셔닝](#파티셔닝)
+      - [Optimizing for running on a cluster:Partitioning](#optimizing-for-running-on-a-clusterpartitioning)
+      - [Choosing a partition size](#choosing-a-partition-size)
+
+---
 
 # Spark-with-Python 06
 

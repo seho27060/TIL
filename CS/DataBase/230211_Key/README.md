@@ -1,3 +1,14 @@
+- [Key](#key)
+  - [키](#키)
+    - [키의 종류](#키의-종류)
+      - [후보키(Candidate Key)](#후보키candidate-key)
+      - [기본키(Primary Key)](#기본키primary-key)
+      - [대체키(Alternate Key)](#대체키alternate-key)
+      - [슈퍼키(Super Key)](#슈퍼키super-key)
+      - [외래키(Foregin Key)](#외래키foregin-key)
+
+---
+
 # Key
 
 ## 키

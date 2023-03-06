@@ -1,4 +1,10 @@
-[TOC]
+- [Auditing](#auditing)
+  - [Auditing](#auditing-1)
+    - [`Auditing` 적용하기](#auditing-적용하기)
+      - [1. Configuration](#1-configuration)
+      - [2. `Entity`에 생성 시각, 수정 시각 `field` 추가](#2-entity에-생성-시각-수정-시각-field-추가)
+
+---
 
 # Auditing
 

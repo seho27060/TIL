@@ -1,4 +1,12 @@
-[TOC]
+- [Redis 00](#redis-00)
+  - [Redis](#redis)
+    - [What is Redis?](#what-is-redis)
+    - [다양한 데이터 구조](#다양한-데이터-구조)
+    - [`Redis`의 영속성](#redis의-영속성)
+      - [Persistence AOF](#persistence-aof)
+      - [Persistence RDB](#persistence-rdb)
+
+---
 
 # Redis 00
 
@@ -78,7 +86,6 @@
   
   - 데이터 백업 과정중 서버가 다운되면 데이터가 사라진다.
 
-# 
 
 ---
 

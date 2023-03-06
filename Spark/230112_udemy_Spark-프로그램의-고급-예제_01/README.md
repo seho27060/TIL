@@ -1,4 +1,12 @@
-[TOC]
+- [Spark-with-Python 04](#spark-with-python-04)
+  - [Spark 프로그램의 고급 예제](#spark-프로그램의-고급-예제)
+    - [\[활동\] Hive를 사용하여 가장 인기 있는 영화 찾기](#활동-hive를-사용하여-가장-인기-있는-영화-찾기)
+    - [\[활동\] 브로드캐스트 변수를 사용하여 ID번호 대신 영화 이름 표시](#활동-브로드캐스트-변수를-사용하여-id번호-대신-영화-이름-표시)
+      - [Introducing Broadcast Variables](#introducing-broadcast-variables)
+      - [예시 코드](#예시-코드)
+    - [\[활동\] 소셜 그래프에서 가장 인기 있는 슈퍼히어로 찾기](#활동-소셜-그래프에서-가장-인기-있는-슈퍼히어로-찾기)
+
+---
 
 # Spark-with-Python 04
 

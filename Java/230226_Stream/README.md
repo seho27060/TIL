@@ -1,4 +1,13 @@
-[TOC]
+- [Java](#java)
+  - [Stream](#stream)
+      - [특징](#특징)
+    - [`Stream` 생성하기](#stream-생성하기)
+    - [`Stream` 가공하기](#stream-가공하기)
+      - [`map()`](#map)
+      - [`filter()`](#filter)
+      - [`collect()`](#collect)
+
+---
 
 # Java
 

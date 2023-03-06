@@ -1,3 +1,24 @@
+- [Consistency and Intergrity](#consistency-and-intergrity)
+  - [정합성과 무결성](#정합성과-무결성)
+      - [훼손 예시](#훼손-예시)
+        - [무결성 훼손](#무결성-훼손)
+        - [정합성 훼손](#정합성-훼손)
+    - [정합성(Consistency)](#정합성consistency)
+    - [무결성(Intergrity)](#무결성intergrity)
+      - [무결성 제약조건(Intergrity Constraint)](#무결성-제약조건intergrity-constraint)
+        - [개체 무결성(Entity Integrity)](#개체-무결성entity-integrity)
+        - [참조 무결성(Referential Integrity)](#참조-무결성referential-integrity)
+        - [도메인 무결성(Domain Integrity)](#도메인-무결성domain-integrity)
+        - [`NULL` 무결성(Null Integrity)](#null-무결성null-integrity)
+        - [고유 무결성(Unique Integrity)](#고유-무결성unique-integrity)
+        - [키 무결성(Key Integrity)](#키-무결성key-integrity)
+        - [관계 무결성(Relationship Integrity)](#관계-무결성relationship-integrity)
+      - [무결성 제약조건의 장단점](#무결성-제약조건의-장단점)
+        - [장점](#장점)
+        - [단점](#단점)
+
+---
+
 # Consistency and Intergrity
 
 ## 정합성과 무결성

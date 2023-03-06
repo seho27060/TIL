@@ -1,4 +1,14 @@
-[TOC]
+- [Spark-with-Python 08](#spark-with-python-08)
+  - [Spark ML을 사용한 머신 러닝](#spark-ml을-사용한-머신-러닝)
+    - [MLLib 소개](#mllib-소개)
+      - [ML Capabilities](#ml-capabilities)
+      - [ML uses DataFrames](#ml-uses-dataframes)
+      - [Lets make some movie recommendations](#lets-make-some-movie-recommendations)
+    - [\[활동\] Spark ML을 사용하여 영화 추천 제작](#활동-spark-ml을-사용하여-영화-추천-제작)
+    - [\[활동\] Spark ML을 사용한 선형 회귀](#활동-spark-ml을-사용한-선형-회귀)
+    - [\[연습\] Spark ML에서 의사 결정 트리를 사용하여 부동산 가격 예측](#연습-spark-ml에서-의사-결정-트리를-사용하여-부동산-가격-예측)
+
+---
 
 # Spark-with-Python 08
 

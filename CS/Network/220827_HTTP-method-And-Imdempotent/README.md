@@ -1,3 +1,17 @@
+- [HTTP method And Imdemponent](#http-method-and-imdemponent)
+  - [HTTP method And Imdemponent](#http-method-and-imdemponent-1)
+    - [멱등성(Idempotent)](#멱등성idempotent)
+    - [HTTP Method의 멱등성](#http-method의-멱등성)
+      - [멱등성이 적용되는 Method](#멱등성이-적용되는-method)
+        - [GET](#get)
+        - [PUT](#put)
+        - [DELETE](#delete)
+      - [멱등성이 적용되지 않는 Method](#멱등성이-적용되지-않는-method)
+        - [POST](#post)
+        - [PATCH](#patch)
+
+---
+
 # HTTP method And Imdemponent
 
 ## HTTP method And Imdemponent

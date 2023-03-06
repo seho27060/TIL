@@ -1,3 +1,13 @@
+- [Nomalization](#nomalization)
+  - [정규화](#정규화)
+    - [정규화의 단계](#정규화의-단계)
+      - [제1 정규화](#제1-정규화)
+      - [제2 정규화](#제2-정규화)
+      - [제3 정규화](#제3-정규화)
+      - [BCNF 정규화(Boyce and Codd Normal Form Normalization)](#bcnf-정규화boyce-and-codd-normal-form-normalization)
+
+---
+
 # Nomalization
 
 ## 정규화

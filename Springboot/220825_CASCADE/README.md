@@ -1,4 +1,15 @@
-[TOC]
+- [Springboot\_03](#springboot_03)
+  - [JPA 영속성 전이(CASCADE)](#jpa-영속성-전이cascade)
+      - [CascadeType](#cascadetype)
+    - [쿼리 메서드](#쿼리-메서드)
+      - [@Query 사용](#query-사용)
+      - [페이지네이션](#페이지네이션)
+    - [Wrapper class](#wrapper-class)
+    - [Generic](#generic)
+    - [NullPointerException(NPE)](#nullpointerexceptionnpe)
+      - [Optional](#optional)
+
+---
 
 # Springboot_03
 

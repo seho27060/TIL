@@ -1,4 +1,11 @@
-[TOC]
+- [Spark-with-Python 09](#spark-with-python-09)
+  - [Spark 스트리밍, 구조적 스트리밍 및 GraphX](#spark-스트리밍-구조적-스트리밍-및-graphx)
+    - [Spark 스트리밍](#spark-스트리밍)
+      - [Structed Streaming](#structed-streaming)
+    - [\[활동\] Python의 구조적 스트리밍](#활동-python의-구조적-스트리밍)
+    - [GraphX(그래프X)](#graphx그래프x)
+
+---
 
 # Spark-with-Python 09
 

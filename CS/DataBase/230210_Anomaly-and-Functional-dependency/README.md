@@ -1,9 +1,12 @@
-- [Index](#index)
-  - [인덱스](#인덱스)
-    - [Index의 장점과 단점](#index의-장점과-단점)
-      - [장점](#장점)
-      - [단점](#단점)
-    - [인덱스 생성 전략](#인덱스-생성-전략)
+- [Anomaly and Functional Dependency](#anomaly-and-functional-dependency)
+  - [이상현상과 함수 종속성](#이상현상과-함수-종속성)
+    - [이상현상(Anomaly)](#이상현상anomaly)
+      - [삽입 이상(Insertion Anomaly)](#삽입-이상insertion-anomaly)
+      - [갱신 이상(Update Anomaly)](#갱신-이상update-anomaly)
+      - [삭제 이상(Delete Anomaly)](#삭제-이상delete-anomaly)
+    - [함수 종속성(Functional Dependency)](#함수-종속성functional-dependency)
+
+---
 
 # Anomaly and Functional Dependency
 
