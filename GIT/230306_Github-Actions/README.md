@@ -1,10 +1,4 @@
-- [Github Actions](#github-actions)
-  - [Github Actions](#github-actions-1)
-    - [구성 요소](#구성-요소)
-      - [Workflows](#workflows)
-      - [Events](#events)
-
----
+[TOC]
 
 # Github Actions
 
@@ -39,6 +33,32 @@
 - `push`, `pull` 과 같은 `repository`에 영향을 주는 활동을 의미한다.
 
 - `event`가 감지되었을 경우 설정에서 따라  `workflows` 트리거(`trigger`)한다.
+
+#### Jobs
+
+> 작업은 동일한 실행기에서 실행되는 워크플로우의 *일련 의 단계(`step`입)니다.* 각 단계는 실행될 쉘 스크립트이거나 실행될 *조치(`actions` )입니다.* 단계는 순서대로 실행되며 서로 의존적입니다. - Github Docs
+
+- `Jobs`는 여러개의 `step`로 구성되어 있다.
+  
+  - `step`는 기본적으로 병렬적으로 실행되나, 서로간에 의존 관계를 설정할 수 있다.
+
+- 각 `Step`는 `Runner`라는 가상 머신에 의해 실행되어 `Step`간에 데이터를 공유할 수 있다.
+
+#### Actions
+
+> `Actions`*는* 복잡하지만 자주 반복되는 task를 수행하는 GitHub Actions 플랫폼용 사용자 지정 애플리케이션입니다. - Github Docs
+
+- `Actions`를 통해 `workflows` 파일을 작성하는 반복 코드의 양을 줄이는 데 도움이 된다.
+
+- `Actions`에 task를 공유하여 동일 `repository`에서 사용하거나 `public` `repository`에 공유하여 `Github`상의 모든 `repository`에 공유할 수 있다.
+  
+  - [GitHub Marketplace](https://github.com/marketplace?type=actions)에서 다양한 공개 `Actions`를 사용할 수 있다.
+
+#### Runners
+
+> `Runners`는 트리거될 때 `Workflows`를 실행하는 서버입니다. 각 `Runners`는 한 번에 하나의 `Job`을 실행할 수 있습니다.
+
+- `Ubuntu Linux`, `Microsoft Windows`, `macOS` 등의 `OS`를 제공한다.
 
 ---
 
