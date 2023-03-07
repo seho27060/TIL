@@ -1,0 +1,8 @@
+name: Github-Actions-Practice
+run-name: ${{ github.actor }} is Pushing New Commits!
+on: [push]
+jobs:
+  check-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'New Commits Pushed Just Now!'
