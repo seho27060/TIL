@@ -12,3 +12,4 @@
 | [230304_IP-And-IP-Packet](https://github.com/seho27060/TIL/tree/master/CS/Network/230304_IP-And-IP-Packet)                                   | `IP` 프로토콜과 `Packet`                        |
 | [230304_OSI-7-And-TCP](https://github.com/seho27060/TIL/tree/master/CS/Network/230304_OSI-7-And-TCP)                                         | `OSI 7 Layer`와 `TCP/IP 4 Layer`            |
 | [230304_TCP-Handshake-And-UDP](https://github.com/seho27060/TIL/tree/master/CS/Network/230304_TCP-Handshake-And-UDP)                         | `TCP` 통신에서의 `Handshake`와 `TCP`와 `UDP`의 차이점 |
+| [230316_Load-Balancing](https://github.com/seho27060/TIL/tree/master/CS/Network/230316_Load-Balancing)                                       | `Load Balancing`과 `Load Balancer`의 종류      |
