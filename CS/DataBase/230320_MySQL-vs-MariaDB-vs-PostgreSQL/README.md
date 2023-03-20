@@ -15,11 +15,11 @@
 
 - `MariaDB`는 `MySQL`의 개발자인 Monty Widenius가 `MySQL`이 기업에 넘어간 이후 불투명한 오픈 소스 정책에 반발하여 `MySQL` 커뮤니티 버전을 fork하여 새롭게 개발되었다.
   
-  - [TIL/Java at master · seho27060/TIL · GitHub](https://github.com/seho27060/TIL/tree/master/Java)
+  - [MariaDB 개요](https://github.com/seho27060/TIL/tree/master/MariaDB)
 
 - `PostgreSQL`은 Micheal Stonebraker의 개발한 `Ingres`가 시초가 되며 `RDBMS`와 구분되는 객체 관계형 데이터베이스 관리 시스템(`ORDBMS`)이다.
   
-  - 
+  - [PostgreSQL 개요](https://github.com/seho27060/TIL/tree/master/PostgreSQL)
 
 ### `DB`간 차이점
 
