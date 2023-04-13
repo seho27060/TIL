@@ -1,5 +1,3 @@
-[TOC]
-
 # Node.js
 
 ## What is Node.js?
@@ -73,10 +71,10 @@
   
   - `Node.js`는 쓰레드를 한개만 사용하고 `Apache`같은 웹 서버보다 훨씬 많은 요청을 처리할 수 있습니다.
 
-- 
-
 ---
 
 - 레퍼런스
 
 > [Node.js - 위키백과, 우리 모두의 백과사전](https://ko.wikipedia.org/wiki/Node.js)
+> 
+> [[Node.JS] 강좌 01편: 소개 | VELOPERT.LOG](https://velopert.com/133)
