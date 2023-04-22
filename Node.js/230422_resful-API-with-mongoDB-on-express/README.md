@@ -38,7 +38,21 @@
 
 #### MongDB
 
-- 
+- `/model` 디렉토리에 db의 커넥터와 url, 컬렉션을 설정하는 `index.js`와 db의 스키마를 정의하는 `model.js`를 생성한다.
+
+#### router와 Controller
+
+- CRUD RESTful API가 작성되는 `router.js`
+  
+  - `HTTP` 요청과 `url`을 `controller.js`의 메서드와 매핑한다.
+
+- `API`의 처리 로직이 작성되는 `controller.js`
+  
+  - `url`에 따른 처리 별 로직이 작성된다.
+  
+  - 실제 `db`와의 요청과 데이터에 대한 처리를 완료하여 `router.js`의 매핑된 `router`에 반환한다.
+  
+  - 컬렉션이 정의된 `index.js`를 통한 생성한 객체는 `Spring`에서의 `Entity`를 `Repository`에서 기본적으로 제공하는 함수(`.find`, `.findById` 등)을 사용할 수 있다.
 
 ---
 
