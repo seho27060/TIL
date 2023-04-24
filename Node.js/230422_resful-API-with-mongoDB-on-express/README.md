@@ -39,6 +39,10 @@
 #### MongDB
 
 - `/model` 디렉토리에 db의 커넥터와 url, 컬렉션을 설정하는 `index.js`와 db의 스키마를 정의하는 `model.js`를 생성한다.
+- `mongoDB`는 `Schemaless`한 특징을 갖는다. 스키마가 존재하지 않는다.
+  - 따라서 사용자가 사용할 디비의 스키마를 임의로 지정하여 `express`에 알려준다.
+  - 생성한 `schema`를 `mongoose.model(스키마)`와 같이 할당하여 db에 존재하는 document의 스키마를 지정한다.
+  - `api`에서 오가는 데이터는 지정한 스키마에 따르므로 전송간 interfacing에 용이하다.
 
 #### router와 Controller
 
@@ -58,4 +62,4 @@
 
 - 레퍼런스
 
-> 
+> [Node.js + MongoDB CRUD API 구현하기](https://freestrokes.tistory.com/136)
