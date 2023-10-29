@@ -14,3 +14,4 @@
 | [230304_TCP-Handshake-And-UDP](https://github.com/seho27060/TIL/tree/master/CS/Network/230304_TCP-Handshake-And-UDP)                         | `TCP` 통신에서의 `Handshake`와 `TCP`와 `UDP`의 차이점 |
 | [230316_Load-Balancing](https://github.com/seho27060/TIL/tree/master/CS/Network/230316_Load-Balancing)                                       | `Load Balancing`과 `Load Balancer`의 종류      |
 | [230321_RESTful-API](https://github.com/seho27060/TIL/tree/master/CS/Network/230321_RESTful-API)                                             | `RESTful API`와 `REST`                      |
+| [231029_Web-Server-And-WAS](https://github.com/seho27060/TIL/tree/master/CS/Network/231029_Web-Server-and-WAS)                               | `Web Server`,`WAS`의 차이와 역할                 |
