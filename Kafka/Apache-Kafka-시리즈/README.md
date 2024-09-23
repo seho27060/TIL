@@ -55,7 +55,12 @@
 
 #### Producer
 
+<<<<<<< HEAD
 ![](.\01.png)
+=======
+![](C:\Users\seho2\AppData\Roaming\marktext\images\2024-08-19-22-53-31-image.png)
+
+> > > > > > > 46e9b09ce3abe8c1813c1e278edaa0a7322d56aa
 
 - 토픽에 데이터를 작성하는 프로듀서
 
@@ -71,7 +76,12 @@
 
 - 널이 아니라면 키에 따라 동일한 파티션에 저장한다.(해싱)
 
+<<<<<<< HEAD
 ![](.\02.png)
+=======
+![](C:\Users\seho2\AppData\Roaming\marktext\images\2024-08-19-23-08-31-image.png)
+
+> > > > > > > 46e9b09ce3abe8c1813c1e278edaa0a7322d56aa
 
 #### Kafka Message Serializer
 
@@ -99,19 +109,35 @@
 
 - 어플리케이션의 모든 컨슈머는 컨슈머 그룹으로 묶여 데이터를 읽는다.
 
+<<<<<<< HEAD
+
 - ![](.\03.png)
+  =======
+- ![](C:\Users\seho2\AppData\Roaming\marktext\images\2024-08-19-23-23-47-image.png)
+  
+  > > > > > > > 46e9b09ce3abe8c1813c1e278edaa0a7322d56aa
 
 ##### Consumer Groups - What if too many consumers?
 
 - 컨슈머가 파티션 개수보다 많으면 어떻게 될까?
 
+<<<<<<< HEAD
 ![](.\04.png)
+=======
+![](C:\Users\seho2\AppData\Roaming\marktext\images\2024-08-19-23-26-07-image.png)
+
+> > > > > > > 46e9b09ce3abe8c1813c1e278edaa0a7322d56aa
 
 - 컨슈머들은 각 파티션에 매핑되고 남는 컨슈머는 대기 상태가 된다.
 
 #### Multiple Consumers on one topic
 
+<<<<<<< HEAD
 ![](.\05.png)
+=======
+![](C:\Users\seho2\AppData\Roaming\marktext\images\2024-08-19-23-27-57-image.png)
+
+> > > > > > > 46e9b09ce3abe8c1813c1e278edaa0a7322d56aa
 
 - 왜 여러개의 그룹이 있을까?
 
@@ -152,8 +178,14 @@
 - 브로커에는 다양한 토픽들의 파이션이 분산되어 존재한다.
   
   - 이걸 수평적 스케일링이라고 한다.
+
+<<<<<<< HEAD
+
+- ![](.\06.png)
+  =======
+- ![](C:\Users\seho2\AppData\Roaming\marktext\images\2024-08-19-23-38-19-image.png)
   
-  - ![](.\06.png)
+  > > > > > > > 46e9b09ce3abe8c1813c1e278edaa0a7322d56aa
 
 #### Kafka Broker Discovery
 
@@ -718,6 +750,8 @@
 ### 96. 어떤 카프카 API를 쓸까?
 
 ![화면 캡처 2024-09-12 225828.png](.\07.png)
+
+
 
 ## Section 14. 실 사례를 통한 인사이트 얻기(빅데이터/ 빠른 데이터)
 
