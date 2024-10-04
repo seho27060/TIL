@@ -113,6 +113,7 @@
 
 - ![](.\03.png)
   =======
+
 - ![](C:\Users\seho2\AppData\Roaming\marktext\images\2024-08-19-23-23-47-image.png)
   
   > > > > > > > 46e9b09ce3abe8c1813c1e278edaa0a7322d56aa
@@ -183,6 +184,7 @@
 
 - ![](.\06.png)
   =======
+
 - ![](C:\Users\seho2\AppData\Roaming\marktext\images\2024-08-19-23-38-19-image.png)
   
   > > > > > > > 46e9b09ce3abe8c1813c1e278edaa0a7322d56aa
@@ -750,8 +752,6 @@
 ### 96. 어떤 카프카 API를 쓸까?
 
 ![화면 캡처 2024-09-12 225828.png](.\07.png)
-
-
 
 ## Section 14. 실 사례를 통한 인사이트 얻기(빅데이터/ 빠른 데이터)
 
